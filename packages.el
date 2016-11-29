@@ -20,3 +20,4 @@
 (package-install? 'use-package)
 (mapc (lambda (package-file) (load package-file))
       (directory-files "~/.emacs.d/packages/" t "^[^\.].*\.el$"))
+(global-company-mode)
