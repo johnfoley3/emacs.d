@@ -3,6 +3,7 @@
 ;;;; Email: mordocai@mordocai.net
 ;;; Magit
 (package-install? 'magit)
+(global-set-key (kbd "C-x g") 'magit-status)
 (setq magit-last-seen-setup-instructions "1.4.0")
 (defun endless/add-PR-fetch ()
   "If refs/pull is not defined on a GH repo, define it."
