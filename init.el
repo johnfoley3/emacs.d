@@ -17,9 +17,6 @@
                              (load-theme 'solarized-light t)
                              (load "~/.emacs.d/packages.el")))
 
-;; Specialize JS
-(setq js-indent-level 2)
-
 ;; From http://stackoverflow.com/a/7250027/693712
 (defun smart-line-beginning ()
   "Move point to the beginning of text on the current line; if that is already
