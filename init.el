@@ -7,6 +7,9 @@
 (package-initialize) ;; You might already have this line
 (load "~/.emacs.d/utilities.el")
 (setq use-package-always-ensure t)
+;; Move like the wind, bullseye
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
 (when (darwin?)
   (setenv "PATH"
          (concat (getenv "PATH")
