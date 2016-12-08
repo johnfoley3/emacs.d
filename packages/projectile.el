@@ -1,6 +1,6 @@
 ;;; Projectile
-(package-install? 'projectile)
+(use-package 'projectile)
 (projectile-global-mode)
 
 ;;; Projectile with Rails
-(package-install? 'projectile-rails)
+(use-package 'projectile-rails)

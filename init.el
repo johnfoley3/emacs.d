@@ -33,10 +33,7 @@ the current position of point, then move it to the beginning of the line."
 
 ;;; Whitespace mode
 (setq-default indent-tabs-mode nil)
-(require 'whitespace)
-(global-whitespace-mode 0)
-(mapc (lambda (mode-hook)
-        (add-hook mode-hook 'whitespace-mode))
+(mapc (lambda (mode-hook))
       '(c-mode-hook
         js-mode-hook
         c++-mode-hook
