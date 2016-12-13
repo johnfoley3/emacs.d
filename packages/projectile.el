@@ -1,6 +1,6 @@
 ;;; Projectile
-(use-package 'projectile)
+(use-package projectile)
 (projectile-global-mode)
 
 ;;; Projectile with Rails
-(use-package 'projectile-rails)
+(use-package projectile-rails)
