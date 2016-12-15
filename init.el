@@ -5,6 +5,12 @@
   ;; For important compatibility libraries like cl-lib
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 (package-initialize) ;; You might already have this line
+(if (not (package-installed-p 'use-package))
+    (progn
+      (package-refresh-contents)
+      (package-install 'use-package)))
+
+(require 'use-package)
 (load "~/.emacs.d/utilities.el")
 (setq use-package-always-ensure t)
 ;; Move like the wind, bullseye
@@ -51,10 +57,11 @@ the current position of point, then move it to the beginning of the line."
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
+    ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
  '(package-selected-packages
    (quote
-    (ace-jump-mode helm-ag helm-company helm XSprojectile-rails js2-mode nlinum-relative nlinum ag neotree magit projectile-rails rubocop rbenv company-quickhelp use-package company helm-projectile org-projectile projectile projectile-codesearch projectile-direnv projectile-git-autofetch robe tide solarized-theme))))
+    (yaml-mode paradox ace-jump-mode helm-ag helm-company helm XSprojectile-rails js2-mode nlinum-relative nlinum ag neotree magit projectile-rails rubocop rbenv company-quickhelp use-package company helm-projectile org-projectile projectile projectile-codesearch projectile-direnv projectile-git-autofetch robe tide solarized-theme)))
+ '(paradox-automatically-star t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
