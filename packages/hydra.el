@@ -81,3 +81,10 @@
 
 (global-set-key
  (kbd "C-c ,") 'hydra-windmove-home-row/body)
+
+(defhydra hydra-helm-move (:color red)
+  "Move around in the Helm buffer easier"
+  ("n" helm-next-line)
+  ("p" helm-previous-line))
+
+(define-key helm-projectile-find-file-map "C-." 'hydra-helm-move/body)
