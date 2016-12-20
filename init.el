@@ -62,7 +62,7 @@ the current position of point, then move it to the beginning of the line."
    (quote
     (foreman-mode web-mode yaml-mode paradox ace-jump-mode helm-ag helm-company helm XSprojectile-rails js2-mode nlinum-relative nlinum ag neotree magit projectile-rails rubocop rbenv company-quickhelp use-package company helm-projectile org-projectile projectile projectile-codesearch projectile-direnv projectile-git-autofetch robe tide solarized-theme)))
  '(paradox-automatically-star t)
- '(paradox-github-token "2312440a845fe320dcf97716aa537a38c7855ede"))
+ '(paradox-github-token "23f5731594ab324d7a2082713a5465cd3ca597af"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
