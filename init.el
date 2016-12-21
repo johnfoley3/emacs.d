@@ -88,6 +88,7 @@ the current position of point, then move it to the beginning of the line."
  '(hl-fg-colors
    (quote
     ("#fdf6e3" "#fdf6e3" "#fdf6e3" "#fdf6e3" "#fdf6e3" "#fdf6e3" "#fdf6e3" "#fdf6e3")))
+ '(inhibit-startup-screen t)
  '(magit-diff-use-overlays nil)
  '(nrepl-message-colors
    (quote
@@ -95,6 +96,7 @@ the current position of point, then move it to the beginning of the line."
  '(org-todo-keywords
    (quote
     ((sequence "TODO" "IN PROGRESS" "REVIEW PENDING" "REVIEW IN PROGRESS" "DONE"))))
+ '(package-enable-at-startup nil)
  '(package-selected-packages
    (quote
     (foreman-mode web-mode yaml-mode paradox ace-jump-mode helm-ag helm-company helm XSprojectile-rails js2-mode nlinum-relative nlinum ag neotree magit projectile-rails rubocop rbenv company-quickhelp use-package company helm-projectile org-projectile projectile projectile-codesearch projectile-direnv projectile-git-autofetch robe tide solarized-theme)))
