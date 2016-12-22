@@ -1,4 +1,4 @@
-* John's Emacs
+# John's Emacs
 
 Welcome! This is my Emacs configuration. It's super cool and useful. Plop it down in your home
 folder or symlink it to that corresponding `.emacs.d` name and then start emacs. The `use-package`
