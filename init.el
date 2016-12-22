@@ -22,7 +22,6 @@
   (setq exec-path (append exec-path '("/usr/local/bin"))))
 (add-hook 'after-init-hook (lambda ()
                              (require 'use-package)
-                             (load-theme 'solarized-light t)
                              (load "~/.emacs.d/packages.el")))
 
 ;; From http://stackoverflow.com/a/7250027/693712
@@ -99,9 +98,9 @@ the current position of point, then move it to the beginning of the line."
  '(package-enable-at-startup nil)
  '(package-selected-packages
    (quote
-    (foreman-mode web-mode yaml-mode paradox ace-jump-mode helm-ag helm-company helm XSprojectile-rails js2-mode nlinum-relative nlinum ag neotree magit projectile-rails rubocop rbenv company-quickhelp use-package company helm-projectile org-projectile projectile projectile-codesearch projectile-direnv projectile-git-autofetch robe tide solarized-theme)))
+    (ruby-end rainbow-delimiters rainbow-parens foreman-mode web-mode yaml-mode paradox ace-jump-mode helm-ag helm-company helm XSprojectile-rails js2-mode nlinum-relative nlinum ag neotree magit projectile-rails rubocop rbenv company-quickhelp use-package company helm-projectile org-projectile projectile projectile-codesearch projectile-direnv projectile-git-autofetch robe tide solarized-theme)))
  '(paradox-automatically-star t)
- '(paradox-github-token "23f5731594ab324d7a2082713a5465cd3ca597af")
+ '(paradox-github-token "0bd52eeb90cafd7f6734cf6f91d8626c3678759a")
  '(pos-tip-background-color "#eee8d5")
  '(pos-tip-foreground-color "#586e75")
  '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#eee8d5" 0.2))

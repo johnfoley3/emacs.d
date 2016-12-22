@@ -10,6 +10,7 @@
    ("t" toggle-truncate-lines "truncate")
    ("w" whitespace-mode "whitespace")
    ("l" global-nlinum-mode "line numbers")
+   ("r" rainbow-delimiters-mode "rainbow delimiters")
    ("q" nil "cancel"))
 
 (global-set-key

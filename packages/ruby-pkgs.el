@@ -2,6 +2,8 @@
   :init
   (add-hook 'ruby-mode-hook 'robe-mode))
 
+(use-package ruby-end)
+
 (use-package rbenv
   :init
   (global-rbenv-mode))

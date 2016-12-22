@@ -1,1 +1,3 @@
-(use-package web-mode)
+(use-package web-mode
+  :init
+  (add-hook 'html-mode-hook 'web-mode))
