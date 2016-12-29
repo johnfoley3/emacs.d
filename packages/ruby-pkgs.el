@@ -1,8 +1,10 @@
 (use-package robe
   :init
-  (add-hook 'ruby-mode-hook 'robe-mode))
+  (add-hook 'ruby-mode-hook 'robe-mode 'rspec-mode))
 
 (use-package ruby-end)
+
+(use-package rspec-mode)
 
 (use-package rbenv
   :init
