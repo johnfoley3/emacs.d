@@ -88,18 +88,20 @@ the current position of point, then move it to the beginning of the line."
  '(hl-fg-colors
    (quote
     ("#fdf6e3" "#fdf6e3" "#fdf6e3" "#fdf6e3" "#fdf6e3" "#fdf6e3" "#fdf6e3" "#fdf6e3")))
+ '(inf-ruby-default-implementation "pry")
  '(inhibit-startup-screen t)
  '(magit-diff-use-overlays nil)
  '(nrepl-message-colors
    (quote
     ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
+ '(org-src-fontify-natively t)
  '(org-todo-keywords
    (quote
     ((sequence "TODO" "IN PROGRESS" "REVIEW PENDING" "REVIEW IN PROGRESS" "DONE"))))
  '(package-enable-at-startup nil)
  '(package-selected-packages
    (quote
-    (rspec-mode color-theme-solarized emacs-color-theme-solarized rainbow-identifiers ruby-end rainbow-delimiters rainbow-parens foreman-mode web-mode yaml-mode paradox ace-jump-mode helm-ag helm-company helm XSprojectile-rails js2-mode nlinum-relative nlinum ag neotree magit projectile-rails rubocop rbenv company-quickhelp use-package company helm-projectile org-projectile projectile projectile-codesearch projectile-direnv projectile-git-autofetch robe tide solarized-theme)))
+    (bundler dumb-jump lua flymake-lua company-lua yasnippet js-doc smartparens smartparents php-mode rspec-mode color-theme-solarized emacs-color-theme-solarized rainbow-identifiers rainbow-delimiters rainbow-parens foreman-mode web-mode yaml-mode paradox ace-jump-mode helm-ag helm-company helm XSprojectile-rails js2-mode nlinum-relative nlinum ag neotree magit projectile-rails rubocop rbenv company-quickhelp use-package company helm-projectile org-projectile projectile projectile-codesearch projectile-direnv projectile-git-autofetch robe tide solarized-theme)))
  '(paradox-github-token t)
  '(pos-tip-background-color "#eee8d5")
  '(pos-tip-foreground-color "#586e75")

@@ -1,8 +1,13 @@
+(use-package inf-ruby
+  :init
+  (add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
+  (add-hook 'after-init-hook 'inf-ruby-switch-setup))
+
+(use-package bundler)
+
 (use-package robe
   :init
   (add-hook 'ruby-mode-hook 'robe-mode 'rspec-mode))
-
-(use-package ruby-end)
 
 (use-package rspec-mode)
 
