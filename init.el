@@ -65,6 +65,8 @@ the current position of point, then move it to the beginning of the line."
    (quote
     ("8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
  '(fci-rule-color "#eee8d5")
+ '(flycheck-ruby-rubocop-executable "/usr/bin/bundle-rubocop")
+ '(global-flycheck-mode t)
  '(highlight-changes-colors (quote ("#d33682" "#6c71c4")))
  '(highlight-symbol-colors
    (--map
@@ -98,6 +100,7 @@ the current position of point, then move it to the beginning of the line."
  '(org-todo-keywords
    (quote
     ((sequence "TODO" "IN PROGRESS" "REVIEW PENDING" "REVIEW IN PROGRESS" "DONE"))))
+ '(org-use-last-clock-out-time-as-effective-time t)
  '(package-enable-at-startup nil)
  '(package-selected-packages
    (quote
@@ -108,6 +111,7 @@ the current position of point, then move it to the beginning of the line."
  '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#eee8d5" 0.2))
  '(term-default-bg-color "#fdf6e3")
  '(term-default-fg-color "#657b83")
+ '(typescript-indent-level 2)
  '(use-package-always-ensure t)
  '(vc-annotate-background nil)
  '(vc-annotate-background-mode nil)

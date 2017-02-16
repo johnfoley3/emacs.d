@@ -1,0 +1,26 @@
+ls
+gs
+ls -sal
+ln -s .profile .bash_profile
+ln -s .bash_profile .profile
+gs
+gs
+source .bash_profile 
+ls
+ls
+ls
+$PATH
+cd ../../../../
+cd ..
+grunt test
+cd ~/projects/intoxitrack-service/
+cd intoxitrack-webclient/
+grunt test
+cd ~/projects/intoxitrack-service/
+cd intoxitrack-webclient/
+grunt test
+tslint -h
+npm i -g tslint
+cd ~/projects/intoxitrack-service/intoxitrack-webclient/
+tslint
+mkdir ~/.emacs.d/snippets/ruby-mode
