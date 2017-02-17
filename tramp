@@ -1,22 +1,30 @@
-;; -*- emacs-lisp -*- <17/01/16 16:17:08 /Users/jfoley/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <17/02/17 11:33:52 /home/john/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
-((["scp" "john" "foleyloaded.io" nil nil]
-  ("uname" "Linux 3.16.0-4-amd64")
+((["su" "root" "Dagr" nil nil]
+  ("uname" "Linux 4.9.0-1-amd64")
   ("locale" "LC_ALL=en_US.utf8")
   ("test" "test")
   ("remote-path"
    ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
   ("remote-shell" "/bin/sh")
-  ("~" "/home/john")
+  ("~root" "/root")
   ("file-exists" "test -e")
   ("stat" nil)
   ("perl-file-spec" t)
   ("perl-cwd-realpath" t)
   ("perl" "\\perl")
   ("id" "/usr/bin/id")
-  ("gid-integer" 1000)
-  ("gid-string" "john")
+  ("gid-integer" 0)
+  ("gid-string" "root")
   ("readlink" "\\readlink")
-  ("uid-integer" 1000)))
+  ("uid-integer" 0)
+  ("tmpdir" "/tmp")
+  ("touch-t" t)
+  ("touch" "\\touch")
+  ("git" "\\git")
+  ("ls" "/bin/ls --color=never")
+  ("ls-dired" t))
+ (["scp" "john" "foleyloaded.io" nil nil]
+  nil))
