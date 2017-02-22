@@ -20,3 +20,5 @@
            fetch-address))))))
 (add-hook 'magit-mode-hook #'endless/add-PR-fetch)
 (add-hook 'git-commit-setup-hook #'git-commit-turn-on-flyspell)
+
+(use-package git-link)
