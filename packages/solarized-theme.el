@@ -1,1 +1,1 @@
-(use-package color-theme-solarized)
+(use-package solarized-theme)
