@@ -1,0 +1,18 @@
+# General Emacs Stuff
+*~
+elpa/
+
+# Specific instance stuff
+auto-save-list/
+projectile-bookmarks.eld
+network-security.data
+flycheck_init.el
+eshell
+recentf
+abbrev_defs
+tramp
+.gnus
+secrets
+
+# MacOSX
+.DS_Store

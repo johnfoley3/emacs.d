@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: it
+# key: it
+# --
+it("it ${1:it_statment}", () => {
+  $0
+});

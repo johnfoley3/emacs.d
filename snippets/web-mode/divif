@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: divif
+# key: divif
+# --
+<div ng-if="$1">
+     $0
+</div>

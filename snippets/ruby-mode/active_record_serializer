@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: active_record_serializer
+# key: active_record_serializer
+# --
+class $1Serializer < ${2:ActiveModel::Serializer}
+  $0
+end

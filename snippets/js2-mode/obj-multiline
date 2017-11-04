@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: obj multiline
+# key: om
+# --
+{
+        $0
+}

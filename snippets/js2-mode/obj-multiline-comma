@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: obj multiline with comma
+# key: omc
+# --
+{
+        ${1:thing}
+},
+$0
