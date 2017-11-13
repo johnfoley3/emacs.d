@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: rschema_string
+# key: rss
+# --
+'$1' => _String,$0
