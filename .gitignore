@@ -13,6 +13,7 @@ abbrev_defs
 tramp
 .gnus
 secrets
+bookmarks
 
 # MacOSX
 .DS_Store
