@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: rschema_iso
+# key: rsiso
+# --
+'$1' => iso8601_schema,$0
