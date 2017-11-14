@@ -3,4 +3,4 @@
 (use-package hledger-mode
   :mode ("\\.journal\\'" "\\.hledger\\'")
   :init
-  (setq hledger-jfile (expand-file-name "~/hledger/personal.journal")))
+  (setq hledger-jfile (expand-file-name "~/projects/hledger-personal-finance/personal-finance.journal")))
