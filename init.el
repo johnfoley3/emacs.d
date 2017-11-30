@@ -30,6 +30,11 @@ the current position of point, then move it to the beginning of the line."
       (beginning-of-line))))
 (add-hook 'prog-mode-hook (lambda () (local-set-key (kbd "C-a") 'smart-line-beginning)))
 
+(add-hook 'after-init-hook (lambda ()
+                             (if (> (string-to-number (format-time-string "%k")) 18)
+                                 (load-theme 'solarized-dark)
+                               (load-theme 'solarized-light))))
+
 ;;; Whitespace mode
 (setq-default indent-tabs-mode nil)
 
