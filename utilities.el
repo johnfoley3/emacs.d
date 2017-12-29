@@ -68,3 +68,10 @@ directory to make multiple eshell windows easier."
   (insert "exit")
   (eshell-send-input)
   (delete-window))
+
+(defun ssh (ssh-to)
+  (interactive "sSSH to: ")
+  (let ((multi-term-program "ssh")
+        (multi-term-buffer-name ssh-to)
+        (multi-term-program-switches ssh-to))
+    (multi-term)))
