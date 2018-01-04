@@ -128,6 +128,7 @@ the current position of point, then move it to the beginning of the line."
  '(org-agenda-files
    (quote
     ("~/projects/org-notes/intoximeters.org" "~/projects/org-notes/1720tucker.org")))
+ '(org-fast-tag-selection-single-key (quote expert))
  '(org-src-fontify-natively t)
  '(org-startup-truncated nil)
  '(org-todo-keywords

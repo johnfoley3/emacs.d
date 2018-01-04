@@ -75,3 +75,9 @@ directory to make multiple eshell windows easier."
         (multi-term-buffer-name ssh-to)
         (multi-term-program-switches ssh-to))
     (multi-term)))
+
+;; https://stackoverflow.com/questions/10363982/how-can-i-open-a-temporary-buffer
+;; Makes a temporary buffer prefixed with "scratch"
+(defun generate-buffer ()
+  (interactive)
+  (switch-to-buffer (make-temp-name "scratch")))
