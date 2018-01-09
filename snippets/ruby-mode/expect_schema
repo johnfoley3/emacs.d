@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: exschema
+# key: exschema
+# --
+expect { $1.validate!(json_response) }.not_to raise_error$0
