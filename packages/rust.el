@@ -3,6 +3,10 @@
 ;;; rust mode for indentation, styling, syntax highlighting, etc
 (use-package rust-mode)
 
+;;; major mode for TOML mode editing
+;;; Putting this here since the only TOML files I've seen so far are Cargo.toml
+(use-package toml-mode)
+
 ;;; cargo minor mode to run cargo commands
 (use-package cargo
   :init

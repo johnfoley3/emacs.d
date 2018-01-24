@@ -140,7 +140,7 @@ the current position of point, then move it to the beginning of the line."
  '(package-enable-at-startup nil)
  '(package-selected-packages
    (quote
-    (nodejs-repl multi-term prettier-js org-mode org dockerfile-mode docker nginx-mode helm-dash devdocs editorconfig jenkins helm-lobsters fontawesome google-this company-terraform terraform-mode unison-mode unison delight ob-rust hledger-mode rust-mode realgud-pry realgud flycheck-rust flymake-rust racer cargo emmet-mode exec-path-from-shell helm-rails helm-rb js2-refactor markdown-mode+ markdown-mode go-snippets flymake-go company-go go-mode helm-css-scss less-css-mode pdf-tools flycheck solarized-emacs prodigy git-link bundler dumb-jump lua flymake-lua company-lua yasnippet js-doc smartparens smartparents php-mode rspec-mode color-theme-solarized emacs-color-theme-solarized rainbow-identifiers rainbow-delimiters rainbow-parens foreman-mode web-mode yaml-mode paradox ace-jump-mode helm-ag helm-company helm XSprojectile-rails js2-mode nlinum-relative nlinum ag magit projectile-rails rubocop rbenv company-quickhelp use-package company helm-projectile org-projectile projectile projectile-codesearch projectile-direnv projectile-git-autofetch robe tide solarized-theme)))
+    (smartscan toml-mode nodejs-repl multi-term prettier-js org-mode org dockerfile-mode docker nginx-mode helm-dash devdocs editorconfig jenkins helm-lobsters fontawesome google-this company-terraform terraform-mode unison-mode unison delight ob-rust hledger-mode rust-mode realgud-pry realgud flycheck-rust flymake-rust racer cargo emmet-mode exec-path-from-shell helm-rails helm-rb js2-refactor markdown-mode+ markdown-mode go-snippets flymake-go company-go go-mode helm-css-scss less-css-mode pdf-tools flycheck solarized-emacs prodigy git-link bundler dumb-jump lua flymake-lua company-lua yasnippet js-doc smartparens smartparents php-mode rspec-mode color-theme-solarized emacs-color-theme-solarized rainbow-identifiers rainbow-delimiters rainbow-parens foreman-mode web-mode yaml-mode paradox ace-jump-mode helm-ag helm-company helm XSprojectile-rails js2-mode nlinum-relative nlinum ag magit projectile-rails rubocop rbenv company-quickhelp use-package company helm-projectile org-projectile projectile projectile-codesearch projectile-direnv projectile-git-autofetch robe tide solarized-theme)))
  '(paradox-github-token t)
  '(pdf-misc-print-programm "/usr/bin/gtklp")
  '(pos-tip-background-color "#eee8d5")
@@ -156,6 +156,7 @@ the current position of point, then move it to the beginning of the line."
  '(rspec-rake-command "rails")
  '(ruby-align-chained-calls t)
  '(ruby-insert-encoding-magic-comment nil)
+ '(rust-format-on-save t)
  '(show-paren-mode t)
  '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#eee8d5" 0.2))
  '(sql-postgres-login-params
