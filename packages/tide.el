@@ -15,8 +15,8 @@
   :init
   (add-hook 'typescript-mode-hook #'setup-tide-mode))
 
-;; enable typescript-tslint checker
-;; adds it to all web mode, and that is just stupid
+;; use web-mode for .tsx
+;; enable typescript-tslint checker only for tsx files
 (add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
 (flycheck-add-mode 'typescript-tslint 'web-mode)
 

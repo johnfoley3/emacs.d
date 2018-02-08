@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: action-creator-test-setup
+# key: actioncreatorspec
+# binding: C-c C-c C-a
+# --
+describe("$1", () => {
+  it("creates a $2 action", () => {
+    $0
+    expect($1($3)).to.eql({ type: $4${3:$(if (yas-text) (concat ", " yas-text))}});
+  });
+});

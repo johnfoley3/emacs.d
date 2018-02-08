@@ -7,11 +7,6 @@
 ;;; jsdoc mode
 (use-package js-doc)
 
-;; (use-package prettier-js
-;;   :init
-;;   (add-hook 'js2-mode-hook 'prettier-js-mode)
-;;   (add-hook 'web-mode-hook 'prettier-js-mode))
-
 ;;; js2 refactor
 (use-package js2-refactor
   :init

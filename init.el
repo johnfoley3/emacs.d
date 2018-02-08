@@ -83,6 +83,7 @@ the current position of point, then move it to the beginning of the line."
  '(fci-rule-color "#eee8d5")
  '(flycheck-command-wrapper-function (quote identity))
  '(flycheck-ruby-rubocop-executable nil)
+ '(flycheck-tslint-args nil)
  '(flycheck-typescript-tslint-executable nil)
  '(global-company-mode t)
  '(global-flycheck-mode t)
