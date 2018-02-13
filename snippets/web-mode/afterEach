@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: afterEach
+# key: after
+# binding: C-c C-c C-a
+# --
+afterEach(() => {
+  $0
+});

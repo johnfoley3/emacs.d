@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: describe
+# key: des
+# binding: C-c C-c C-d
+# --
+describe("$1", () => {
+  $0
+});

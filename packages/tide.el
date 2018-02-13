@@ -25,3 +25,9 @@
             (if (string-equal "tsx" (file-name-extension buffer-file-name))
                 (setup-tide-mode)
               (setq flycheck-disabled-checkers '(typescript-tslint)))))
+
+(defun toggle-arrow-function ()
+  (interactive)
+  (insert "{") (newline-and-indent) (insert "return ")
+  (end-of-line) (backward-char) (insert ";")
+  (newline) (insert "}") (indent-according-to-mode))

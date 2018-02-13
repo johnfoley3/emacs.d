@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: it
+# key: it
+# binding: C-c C-c C-i
+# --
+it("$1", () => {
+  $0
+});

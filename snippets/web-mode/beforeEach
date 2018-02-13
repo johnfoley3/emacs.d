@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: beforeEach
+# key: before
+# binding: C-c C-c C-b
+# --
+beforeEach(() => {
+  $0
+});
