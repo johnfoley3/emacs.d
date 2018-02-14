@@ -81,3 +81,9 @@ directory to make multiple eshell windows easier."
 (defun generate-buffer ()
   (interactive)
   (switch-to-buffer (make-temp-name "scratch")))
+
+(defun newline-and-center-point ()
+  "Move and center point from in the middle of a new block like structure."
+  (interactive)
+  (newline-and-indent) (newline-and-indent) (forward-line -1) (indent-according-to-mode))
+(global-set-key (kbd "C-c C-c d") 'newline-and-center-point)
