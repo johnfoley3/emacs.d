@@ -11,7 +11,6 @@
   (company-mode +1))
 
 (use-package tide
-  ;; :mode ("\\.tsx\\'" . typescript-mode)
   :init
   (add-hook 'typescript-mode-hook #'setup-tide-mode))
 

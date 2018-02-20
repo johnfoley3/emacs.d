@@ -5,3 +5,9 @@
   (insert (concat "https://intoximeters.atlassian.net/browse/TRACK-" id)))
 
 (use-package org)
+
+(org-babel-do-load-languages 'org-babel-load-languages
+    '(
+        (shell . t)
+    )
+)

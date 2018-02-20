@@ -35,18 +35,15 @@
   (end-of-buffer))
 
 (use-package inf-ruby
-  :init
-  (add-hook 'ruby-mode-hook 'inf-ruby-minor-mode)
-  (add-hook 'after-init-hook 'inf-ruby-switch-setup))
+  :hook ((ruby-mode . inf-ruby-minor-mode)
+         (after-init . inf-ruby-switch-setup)))
 
 (use-package bundler)
 (use-package robe
-  :init
-  (add-hook 'ruby-mode-hook 'robe-mode))
+  :hook (ruby-mode . robe-mode))
 
 (use-package rspec-mode
-  :init
-  (add-hook 'ruby-mode-hook 'rspec-mode)
+  :hook ( ruby-mode-hook . rspec-mode)
   :bind (:map rspec-mode-map
               ("C-c , S" . foley-rspec-verify-single-debug)
               ("C-c , V" . foley-rspec-verify-debug)))
@@ -56,5 +53,4 @@
   (global-rbenv-mode))
 
 (use-package rubocop
-  :init
-  (add-hook 'ruby-mode-hook #'rubocop-mode))
+  :hook (ruby-mode . rubocop-mode))
