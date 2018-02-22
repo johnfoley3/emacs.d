@@ -1,3 +1,14 @@
+;;; init.el -- Ran during emacs start up to do all the things -*- lexical-binding: t; -*-
+
+;; Copyright (C) 2018 John Foley <johnfoley.rocks>
+
+;;; Commentary:
+
+;; Sets up and runs all the things.  /packages holds all the package declarations and config
+;; while /site holds all the instance specific things
+
+;;; Code:
+
 (require 'package) ;; You might already have this line
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
@@ -8,7 +19,7 @@
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 (package-initialize) ;; You might already have this line
 (set-face-attribute 'default nil :height 160)
-(if (not (package-installed-p 'use-package))
+(when (not (package-installed-p 'use-package))
     (progn
       (package-refresh-contents)
       (package-install 'use-package)))
@@ -21,8 +32,7 @@
 
 ;; From http://stackoverflow.com/a/7250027/693712
 (defun smart-line-beginning ()
-  "Move point to the beginning of text on the current line; if that is already
-the current position of point, then move it to the beginning of the line."
+  "Move point to the beginning of text on the current line; if that is already the current position of point, then move it to the beginning of the line."
   (interactive)
   (let ((pt (point)))
     (beginning-of-line-text)
@@ -307,3 +317,6 @@ the current position of point, then move it to the beginning of the line."
 (add-hook 'eshell-mode-hook
           (lambda ()
             (setq auto-composition-mode nil)))
+
+(provide 'init)
+;;; init.el ends here
