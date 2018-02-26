@@ -9,36 +9,38 @@
 
 ;;; Code:
 
-(require 'package) ;; You might already have this line
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
 
-(when (< emacs-major-version 24)
-  ;; For important compatibility libraries like cl-lib
-  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
-(package-initialize) ;; You might already have this line
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
+(setq debug-on-error t)
+
+;; an older version of emacs may try to load this accidentally; prevent the issue right away
+(let ((minver "24.3"))
+  (when (version< emacs-version minver)
+    (error "Your Emacs is too old -- this config requires v%s or higher" minver)))
+
+;; set up common config for garbage collection
+(let ((normal-gc-cons-threshold (* 20 1024 1024))
+      (init-gc-cons-threshold (* 128 1024 1024)))
+  (setq gc-cons-threshold init-gc-cons-threshold)
+  (add-hook 'after-init-hook
+            (lambda () (setq gc-cons-threshold normal-gc-cons-threshold))))
+
+;; make loading files easier
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "site" user-emacs-directory))
+
+;; Custom file for emacs custom config. Cleans up the init.el file considerably
+;; (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+
+(require 'utilities) ;; ./lisp/utilities.el
+(require 'packages) ;; ./lisp/packages.el
+
 (set-face-attribute 'default nil :height 160)
-(when (not (package-installed-p 'use-package))
-    (progn
-      (package-refresh-contents)
-      (package-install 'use-package)))
-
-(require 'use-package)
-(load "~/.emacs.d/utilities.el")
-(add-hook 'after-init-hook (lambda ()
-                             (require 'use-package)
-                             (load "~/.emacs.d/packages.el")))
-
-;; From http://stackoverflow.com/a/7250027/693712
-(defun smart-line-beginning ()
-  "Move point to the beginning of text on the current line; if that is already the current position of point, then move it to the beginning of the line."
-  (interactive)
-  (let ((pt (point)))
-    (beginning-of-line-text)
-    (when (eq pt (point))
-      (beginning-of-line))))
-(add-hook 'prog-mode-hook (lambda () (local-set-key (kbd "C-a") 'smart-line-beginning)))
 
 (add-hook 'after-init-hook (lambda ()
                              (if (> (string-to-number (format-time-string "%k")) 18)
@@ -51,13 +53,6 @@
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-
-(defun foley-save-without-deleting-trailing-whitespace ()
-  "Will unset the global delete trailing whitespace hook on save, save, then add it back."
-  (interactive)
-  (remove-hook 'before-save-hook 'delete-trailing-whitespace)
-  (save-buffer)
-  (add-hook 'before-save-hook 'delete-trailing-whitespace))
 
 (global-set-key (kbd "C-.") 'other-window)
 

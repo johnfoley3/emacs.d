@@ -52,5 +52,23 @@
   (interactive)
   (insert (calendar-date-string (calendar-current-date) nil omit-day-of-week-p)))
 
+;; From http://stackoverflow.com/a/7250027/693712
+(defun smart-line-beginning ()
+  "Move point to the beginning of text on the current line; if that is already the current position of point, then move it to the beginning of the line."
+  (interactive)
+  (let ((pt (point)))
+    (beginning-of-line-text)
+    (when (eq pt (point))
+      (beginning-of-line))))
+(add-hook 'prog-mode-hook (lambda () (local-set-key (kbd "C-a") 'smart-line-beginning)))
+
+;; useful for when a file depends on having a trailing whitespace, such as Rails structure.sql files
+(defun foley-save-without-deleting-trailing-whitespace ()
+  "Will unset the global delete trailing whitespace hook on save, save, then add it back."
+  (interactive)
+  (remove-hook 'before-save-hook 'delete-trailing-whitespace)
+  (save-buffer)
+  (add-hook 'before-save-hook 'delete-trailing-whitespace))
+
 (provide 'utilities)
 ;;; utilities.el ends here

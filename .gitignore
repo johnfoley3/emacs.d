@@ -1,6 +1,6 @@
 # General Emacs Stuff
 *~
-elpa/
+elpa*
 
 # Specific instance stuff
 auto-save-list/
