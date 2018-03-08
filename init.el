@@ -75,6 +75,8 @@
                   (company-dabbrev-code company-gtags company-etags company-keywords)
                   company-oddmuse company-dabbrev)))
  '(company-global-modes (quote (not inf-ruby)))
+ '(company-quickhelp-color-background "#4F4F4F")
+ '(company-quickhelp-color-foreground "#DCDCCC")
  '(company-quickhelp-mode t)
  '(compilation-message-face (quote default))
  '(css-indent-offset 2)
@@ -84,12 +86,13 @@
  '(cua-read-only-cursor-color "#859900")
  '(custom-safe-themes
    (quote
-    ("8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
+    ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "e11569fd7e31321a33358ee4b232c2d3cf05caccd90f896e1df6cab228191109" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
  '(fci-rule-color "#eee8d5")
  '(flycheck-command-wrapper-function (quote identity))
  '(flycheck-ruby-rubocop-executable nil)
  '(flycheck-tslint-args nil)
  '(flycheck-typescript-tslint-executable nil)
+ '(git-link-default-branch "master")
  '(global-company-mode t)
  '(global-flycheck-mode t)
  '(gnus-init-file "~/.emacs.d/.gnus")
@@ -146,9 +149,10 @@
  '(package-enable-at-startup nil)
  '(package-selected-packages
    (quote
-    (smartscan toml-mode nodejs-repl multi-term prettier-js org-mode org dockerfile-mode docker nginx-mode helm-dash devdocs editorconfig jenkins helm-lobsters fontawesome google-this company-terraform terraform-mode unison-mode unison delight ob-rust hledger-mode rust-mode realgud-pry realgud flycheck-rust flymake-rust racer cargo emmet-mode exec-path-from-shell helm-rails helm-rb js2-refactor markdown-mode+ markdown-mode go-snippets flymake-go company-go go-mode helm-css-scss less-css-mode pdf-tools flycheck solarized-emacs prodigy git-link bundler dumb-jump lua flymake-lua company-lua yasnippet js-doc smartparens smartparents php-mode rspec-mode color-theme-solarized emacs-color-theme-solarized rainbow-identifiers rainbow-delimiters rainbow-parens foreman-mode web-mode yaml-mode paradox ace-jump-mode helm-ag helm-company helm XSprojectile-rails js2-mode nlinum-relative nlinum ag magit projectile-rails rubocop rbenv company-quickhelp use-package company helm-projectile org-projectile projectile projectile-codesearch projectile-direnv projectile-git-autofetch robe tide solarized-theme)))
+    (spacemacs-theme zenburn-theme ob-crystal inf-crystal flycheck-crystal crystal-mode smartscan toml-mode nodejs-repl multi-term prettier-js org-mode org dockerfile-mode docker nginx-mode helm-dash devdocs editorconfig jenkins helm-lobsters fontawesome google-this company-terraform terraform-mode unison-mode unison delight ob-rust hledger-mode rust-mode realgud-pry realgud flycheck-rust flymake-rust racer cargo emmet-mode exec-path-from-shell helm-rails helm-rb js2-refactor markdown-mode+ markdown-mode go-snippets flymake-go company-go go-mode helm-css-scss less-css-mode pdf-tools flycheck solarized-emacs prodigy git-link bundler dumb-jump lua flymake-lua company-lua yasnippet js-doc smartparens smartparents php-mode rspec-mode color-theme-solarized emacs-color-theme-solarized rainbow-identifiers rainbow-delimiters rainbow-parens foreman-mode web-mode yaml-mode paradox ace-jump-mode helm-ag helm-company helm XSprojectile-rails js2-mode nlinum-relative nlinum ag magit projectile-rails rubocop rbenv company-quickhelp use-package company helm-projectile org-projectile projectile projectile-codesearch projectile-direnv projectile-git-autofetch robe tide solarized-theme)))
  '(paradox-github-token t)
  '(pdf-misc-print-programm "/usr/bin/gtklp")
+ '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(pos-tip-background-color "#eee8d5")
  '(pos-tip-foreground-color "#586e75")
  '(projectile-completion-system (quote helm))
