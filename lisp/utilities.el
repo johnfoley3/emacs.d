@@ -39,12 +39,6 @@
   (let ((default-directory "/Users/jfoley/projects/intoxitrack-service"))
     (compile "bundle install && bundle exec rails intox:respawn && cd intoxitrack-webclient && yarn && npm run build-test")))
 
-(defun build-test ()
-  "Ensures packages are up tod ate and builds the bundle file for the front end."
-  (interactive)
-  (let ((default-directory "/Users/jfoley/projects/intoxitrack-service/intoxitrack-webclient"))
-    (compile "yarn && npm run build-test")))
-
 (defun current-timestamp ()
   "Insert the current date time string in ISO8601 format.  Use %Y-%m-%dT%H:%M:%S%z format."
    (interactive)
