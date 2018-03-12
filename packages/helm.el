@@ -1,5 +1,5 @@
 (use-package helm
-  :diminish "" ;; don't show helm in mini bar
+  :delight
   :bind (("M-x" . helm-M-x)
          ("C-x b" . helm-mini)
          ("M-y" . helm-show-kill-ring)

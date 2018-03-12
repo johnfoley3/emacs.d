@@ -1,4 +1,4 @@
-;;;; Credit for this goes to Lily Carpenter
+;;;; Credit for endless/add-PR-fetch goes to Lily Carpenter
 ;;;; Web: https://azrazalea.net
 ;;;; Email: lily@azrazalea.net
 ;;; Magit

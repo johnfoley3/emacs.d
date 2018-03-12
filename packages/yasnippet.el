@@ -1,6 +1,6 @@
 ;; Yasnippet
 (use-package yasnippet
-  :diminish yasnippet
+  :delight
   :init
   (add-to-list 'load-path
                "~/.emacs.d/plugins/yasnippet")

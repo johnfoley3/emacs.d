@@ -1,6 +1,8 @@
 ;; Company mode
+
 (use-package company
-  :diminish "")
+  :delight)
 (use-package company-quickhelp
+  :delight
   :config
   (company-quickhelp-mode 1))

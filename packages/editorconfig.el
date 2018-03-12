@@ -1,4 +1,4 @@
 (use-package editorconfig
-  :diminish "EdConf"
+  :delight
   :config
   (editorconfig-mode 1))

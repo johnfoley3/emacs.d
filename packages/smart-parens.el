@@ -1,5 +1,5 @@
 (use-package smartparens
-  :diminish "")
+  :delight)
 (require 'smartparens-config)
 (smartparens-global-mode t)
 (sp-local-pair 'ruby-mode "#{" "}")
