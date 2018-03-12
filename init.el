@@ -219,6 +219,7 @@
    ["#eee8d5" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#073642"])
  '(xterm-color-names-bright
    ["#fdf6e3" "#cb4b16" "#93a1a1" "#839496" "#657b83" "#6c71c4" "#586e75" "#002b36"])
+ '(yas-also-auto-indent-first-line t)
  '(yas-good-grace nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

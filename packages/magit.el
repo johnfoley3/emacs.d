@@ -8,6 +8,9 @@
   (add-hook 'magit-mode-hook #'endless/add-PR-fetch)
   (unless (windows?) (add-hook 'git-commit-setup-hook #'git-commit-turn-on-flyspell)))
 
+(use-package autorevert
+  :delight auto-revert-mode)
+
 (setq magit-last-seen-setup-instructions "1.4.0")
 (defun endless/add-PR-fetch ()
   "If refs/pull is not defined on a GH repo, define it."

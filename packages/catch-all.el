@@ -2,5 +2,6 @@
 
 (require 'delight)
 (delight '(
+           (yas/minor-mode)
            (abbrev-mode)
            ))
