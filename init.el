@@ -42,10 +42,10 @@
 
 (set-face-attribute 'default nil :height 160)
 
-(add-hook 'after-init-hook (lambda ()
-                             (if (> (string-to-number (format-time-string "%k")) 18)
-                                 (load-theme 'solarized-dark)
-                               (load-theme 'solarized-light))))
+;; (add-hook 'after-init-hook (lambda ()
+;;                              (if (> (string-to-number (format-time-string "%k")) 18)
+;;                                  (load-theme 'solarized-dark)
+;;                                (load-theme 'solarized-light))))
 
 ;;; Whitespace mode
 (setq-default indent-tabs-mode nil)
@@ -170,6 +170,7 @@
  '(ruby-insert-encoding-magic-comment nil)
  '(rust-format-on-save t)
  '(show-paren-mode t)
+ '(size-indication-mode t)
  '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#eee8d5" 0.2))
  '(sql-postgres-login-params
    (quote
