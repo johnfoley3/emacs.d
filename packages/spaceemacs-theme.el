@@ -1,1 +1,2 @@
-(use-package spacemacs-theme)
+(use-package spacemacs-theme
+  :defer t)

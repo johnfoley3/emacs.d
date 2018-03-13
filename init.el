@@ -16,7 +16,7 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-(setq debug-on-error t)
+;; (setq debug-on-error t)
 
 ;; an older version of emacs may try to load this accidentally; prevent the issue right away
 (let ((minver "24.3"))

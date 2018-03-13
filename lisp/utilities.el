@@ -11,7 +11,7 @@
 
 (defadvice load-theme (before theme-dont-propagate activate)
   "Advises 'load-theme' that it should disable all other custom enabled themes first."
- (mapcar #'disable-theme custom-enabled-themes))
+ (mapc #'disable-theme custom-enabled-themes))
 
 (defun darwin? ()
   "Figure out if the system type is osx."
