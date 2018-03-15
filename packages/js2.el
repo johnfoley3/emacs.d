@@ -12,4 +12,10 @@
   :init
   (add-hook 'js2-mode-hook #'js2-refactor-mode))
 
+;;; Add node_modules/.bin to path
+(use-package add-node-modules-path
+  :hook ((typescript-mode . add-node-modules-path)
+         (js2-mode . add-node-modules-path)
+         (web-mode . add-node-modules-path)))
+
 (js2r-add-keybindings-with-prefix "C-c C-d")

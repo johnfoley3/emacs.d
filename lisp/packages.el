@@ -34,10 +34,10 @@
   (setq package-user-dir versioned-package-dir))
 
 (package-initialize)
+(package-refresh-contents)
 
 (when (not (package-installed-p 'use-package))
     (progn
-      (package-refresh-contents)
       (package-install 'use-package)))
 (require 'use-package)
 

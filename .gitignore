@@ -3,6 +3,7 @@
 elpa*
 
 # Specific instance stuff
+site
 auto-save-list/
 projectile-bookmarks.eld
 network-security.data

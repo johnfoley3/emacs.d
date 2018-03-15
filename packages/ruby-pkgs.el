@@ -52,5 +52,6 @@
   :init
   (global-rbenv-mode))
 
+
 (use-package rubocop
   :hook (ruby-mode . rubocop-mode))
