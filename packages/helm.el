@@ -11,6 +11,7 @@
 (use-package helm-projectile)
 (use-package helm-company)
 (use-package helm-ag)
+(use-package helm-swoop)
 
 ;; These are more for fun
 

@@ -33,12 +33,6 @@
   (newline-and-indent) (newline-and-indent) (forward-line -1) (indent-according-to-mode))
 (global-set-key (kbd "C-c C-c d") 'newline-and-center-point)
 
-(defun refresh-dev ()
-  "Ensures packages are up to date and rebuilds database."
-  (interactive)
-  (let ((default-directory "/Users/jfoley/projects/intoxitrack-service"))
-    (compile "bundle install && bundle exec rails intox:respawn && cd intoxitrack-webclient && yarn && npm run build-test")))
-
 (defun current-timestamp ()
   "Insert the current date time string in ISO8601 format.  Use %Y-%m-%dT%H:%M:%S%z format."
    (interactive)
