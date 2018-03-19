@@ -7,7 +7,12 @@
 (use-package org)
 
 (org-babel-do-load-languages 'org-babel-load-languages
-    '(
-        (shell . t)
-    )
-)
+                             '(
+                               (shell . t)
+                               )
+                             )
+
+(defun foley-org-insert-ticket-header ()
+  "Insert an org todo subheading with a link as the title."
+  (interactive)
+  (org-insert-todo-subheading nil) (org-insert-link))
