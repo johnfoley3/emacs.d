@@ -14,8 +14,10 @@
 
 ;;; Add node_modules/.bin to path
 (use-package add-node-modules-path
-  :hook ((typescript-mode . add-node-modules-path)
-         (js2-mode . add-node-modules-path)
-         (web-mode . add-node-modules-path)))
+  :hook ((typescript-mode js2-mode web-mode) . add-node-modules-path))
+(setq add-node-modules-path-debug t)
 
 (js2r-add-keybindings-with-prefix "C-c C-d")
+
+(use-package npm-mode)
+(use-package yarn-mode)

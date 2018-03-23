@@ -41,8 +41,10 @@
       (package-install 'use-package)))
 (require 'use-package)
 
-(mapc (lambda (package-file) (load package-file))
-      (directory-files (concat user-emacs-directory "packages/") t "^[^\.].*\.el$"))
+(add-hook 'after-init-hook
+          (lambda ()
+            (mapc (lambda (package-file) (load package-file))
+      (directory-files (concat user-emacs-directory "packages/") t "^[^\.].*\.el$"))))
 
 (provide 'packages)
 ;;; packages.el ends here

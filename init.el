@@ -47,6 +47,9 @@
 (menu-bar-mode -1)
 (toggle-scroll-bar -1)
 
+(add-hook 'after-init-hook (lambda ()
+                             (load-theme 'spacemacs-dark)))
+
 ;; (add-hook 'after-init-hook (lambda ()
 ;;                              (if (> (string-to-number (format-time-string "%k")) 18)
 ;;                                  (load-theme 'solarized-dark)
