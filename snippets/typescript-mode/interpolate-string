@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: interpolate
+# key: s
+# --
+\$\{$0\}
