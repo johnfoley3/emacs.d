@@ -30,7 +30,6 @@
    (quote
     ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "e11569fd7e31321a33358ee4b232c2d3cf05caccd90f896e1df6cab228191109" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
  '(fci-rule-color "#eee8d5")
- '(flycheck-command-wrapper-function (quote identity))
  '(flycheck-ruby-rubocop-executable nil)
  '(flycheck-tslint-args nil)
  '(flycheck-typescript-tslint-executable nil)
