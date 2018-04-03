@@ -1,3 +1,15 @@
+;; Command to list ignored files:
+;; $ git ls-files --others --ignored --exclude-standard --directory
+(defun magit-ignored-files ()
+  (magit-git-items "ls-files" "--others" "--ignored" "--exclude-standard" "-z" "--directory"))
+
+(defun magit-insert-ignored-files ()
+  (-when-let (files (magit-ignored-files))
+    (magit-insert-section (ignored)
+      (magit-insert-heading "Ignored files:")
+      (magit-insert-un/tracked-files-1 files nil)
+      (insert ?\n))))
+
 ;;;; Credit for endless/add-PR-fetch goes to Lily Carpenter
 ;;;; Web: https://azrazalea.net
 ;;;; Email: lily@azrazalea.net
@@ -6,7 +18,8 @@
   :init
   (global-set-key (kbd "C-x g") 'magit-status)
   (add-hook 'magit-mode-hook #'endless/add-PR-fetch)
-  (unless (windows?) (add-hook 'git-commit-setup-hook #'git-commit-turn-on-flyspell)))
+  (unless (windows?) (add-hook 'git-commit-setup-hook #'git-commit-turn-on-flyspell))
+  :hook ((magit-status-sections-hook . magit-insert-ignored-files)))
 
 (use-package autorevert
   :delight auto-revert-mode)
