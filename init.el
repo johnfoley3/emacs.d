@@ -64,10 +64,8 @@
 ;;; Whitespace mode
 (setq-default indent-tabs-mode nil)
 
-(define-key global-map (kbd "RET") 'newline-and-indent)
-
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-
+(global-set-key (kbd "RET") 'newline-and-indent)
 (global-set-key (kbd "C-.") 'other-window)
 
 ;;; Custom Functions
