@@ -30,13 +30,17 @@
   (add-hook 'after-init-hook
             (lambda () (setq gc-cons-threshold normal-gc-cons-threshold))))
 
-;; make loading files easier
-(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
-(add-to-list 'load-path (expand-file-name "site" user-emacs-directory))
+(defun expand-in-user-dir (NAME)
+  "Expand NAME to an absolute path in the user Emacs' directory."
+  (expand-file-name NAME user-emacs-directory))
 
 ;; Custom file for emacs custom config. Cleans up the init.el file considerably
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(setq custom-file (expand-in-user-dir "custom.el"))
 (load custom-file)
+
+;; make loading files easier
+(add-to-list 'load-path (expand-in-user-dir "lisp"))
+(add-to-list 'load-path (expand-in-user-dir "site"))
 
 (require 'utilities) ;; ./lisp/utilities.el
 (require 'packages) ;; ./lisp/packages.el
@@ -46,6 +50,8 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (toggle-scroll-bar -1)
+
+(setq backup-directory-alist '(("." . "~/.backups")))
 
 (add-hook 'after-init-hook (lambda ()
                              (load-theme 'spacemacs-dark)))

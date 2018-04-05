@@ -39,6 +39,7 @@
 (when (not (package-installed-p 'use-package))
     (progn
       (package-install 'use-package)))
+(defvar use-package-always-ensure t)
 (require 'use-package)
 
 (add-hook 'after-init-hook
