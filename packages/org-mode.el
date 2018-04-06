@@ -1,10 +1,6 @@
 ;;; custom org mode configuration
-(defun foley/build-jira-link (id)
-  "Given a Jira ID number and optional project PREFIX, return the url of the Jira issue."
-  (interactive "sJira ID: ")
-  (insert (concat "https://intoximeters.atlassian.net/browse/TRACK-" id)))
-
 (use-package org)
+(require 'org)
 
 (org-babel-do-load-languages 'org-babel-load-languages
                              '(
@@ -12,7 +8,15 @@
                                )
                              )
 
+(use-package org-jira)
+(require 'org-jira)
+
 (defun foley-org-insert-ticket-header ()
   "Insert an org todo subheading with a link as the title."
   (interactive)
   (org-insert-todo-subheading nil) (org-insert-link))
+
+(defun foley-insert-contact-subheading (name)
+  "Insert a new org mode subheading with the NAME as the title."
+  (interactive "sName: ")
+  (org-insert-subheading nil) (insert name))
