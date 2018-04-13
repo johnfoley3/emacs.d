@@ -20,3 +20,9 @@
   "Insert a new org mode subheading with the NAME as the title."
   (interactive "sName: ")
   (org-insert-subheading nil) (insert name))
+
+(use-package org-brain
+  :init
+  (setq org-brain-path "~/org-brain")
+  :config
+  (setq org-id-locations-file "~/.emacs.d/.org-id-locations"))
