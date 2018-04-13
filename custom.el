@@ -34,7 +34,6 @@
  '(flycheck-ruby-rubocop-executable nil)
  '(flycheck-tslint-args nil)
  '(flycheck-typescript-tslint-executable nil)
- '(git-link-default-branch "master")
  '(global-company-mode t)
  '(global-flycheck-mode t)
  '(global-rbenv-mode t)
@@ -92,7 +91,7 @@
  '(package-enable-at-startup nil)
  '(package-selected-packages
    (quote
-    (org-jira guide-key smart-mode-line helm-chrome engine-mode gotest gorepl-mode yarn-mode npm-mode helm-swoop indent-guide add-node-modules-path dotenv-mode spacemacs-theme zenburn-theme ob-crystal inf-crystal flycheck-crystal crystal-mode smartscan toml-mode nodejs-repl multi-term prettier-js org-mode org dockerfile-mode docker nginx-mode helm-dash devdocs editorconfig jenkins helm-lobsters fontawesome google-this company-terraform terraform-mode unison-mode unison delight ob-rust hledger-mode rust-mode realgud-pry realgud flycheck-rust flymake-rust racer cargo emmet-mode exec-path-from-shell helm-rails helm-rb js2-refactor markdown-mode+ markdown-mode go-snippets flymake-go company-go go-mode helm-css-scss less-css-mode pdf-tools flycheck solarized-emacs prodigy git-link bundler dumb-jump lua flymake-lua company-lua yasnippet js-doc smartparens smartparents php-mode rspec-mode color-theme-solarized emacs-color-theme-solarized rainbow-identifiers rainbow-delimiters rainbow-parens foreman-mode web-mode yaml-mode paradox ace-jump-mode helm-ag helm-company helm XSprojectile-rails js2-mode nlinum-relative nlinum ag magit projectile-rails rubocop rbenv company-quickhelp use-package company helm-projectile org-projectile projectile projectile-codesearch projectile-direnv projectile-git-autofetch robe tide solarized-theme)))
+    (org-brain org-jira guide-key smart-mode-line helm-chrome engine-mode gotest gorepl-mode yarn-mode npm-mode helm-swoop indent-guide add-node-modules-path dotenv-mode spacemacs-theme zenburn-theme ob-crystal inf-crystal flycheck-crystal crystal-mode smartscan toml-mode nodejs-repl multi-term prettier-js org-mode org dockerfile-mode docker nginx-mode helm-dash devdocs editorconfig jenkins helm-lobsters fontawesome google-this company-terraform terraform-mode unison-mode unison delight ob-rust hledger-mode rust-mode realgud-pry realgud flycheck-rust flymake-rust racer cargo emmet-mode exec-path-from-shell helm-rails helm-rb js2-refactor markdown-mode+ markdown-mode go-snippets flymake-go company-go go-mode helm-css-scss less-css-mode pdf-tools flycheck solarized-emacs prodigy git-link bundler dumb-jump lua flymake-lua company-lua yasnippet js-doc smartparens smartparents php-mode rspec-mode color-theme-solarized emacs-color-theme-solarized rainbow-identifiers rainbow-delimiters rainbow-parens foreman-mode web-mode yaml-mode paradox ace-jump-mode helm-ag helm-company helm XSprojectile-rails js2-mode nlinum-relative nlinum ag magit projectile-rails rubocop rbenv company-quickhelp use-package company helm-projectile org-projectile projectile projectile-codesearch projectile-direnv projectile-git-autofetch robe tide solarized-theme)))
  '(paradox-github-token t)
  '(pdf-misc-print-programm "/usr/bin/gtklp")
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
@@ -111,6 +110,10 @@
  '(ruby-align-chained-calls t)
  '(ruby-insert-encoding-magic-comment nil)
  '(rust-format-on-save t)
+ '(safe-local-variable-values
+   (quote
+    ((jiralib-url . "https://intoximeters.atlassian.net")
+     (jiralib-url . https://intoximeters\.atlassian\.net))))
  '(sentence-end-double-space nil)
  '(show-paren-mode t)
  '(size-indication-mode t)

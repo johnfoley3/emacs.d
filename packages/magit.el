@@ -39,4 +39,15 @@
            "config" "--add" "remote.origin.fetch"
            fetch-address))))))
 
-(use-package git-link)
+(use-package git-link
+  :bind
+  (("C-c g l" . git-link)
+   ("C-c g m" . git-link-master)))
+
+(require 'git-link)
+(require 'magit)
+(defun git-link-master ()
+  "Works like git-link except it forces the use of master branch instead of the default branch."
+  (interactive)
+  (let ((git-link-default-branch "master"))
+    (call-interactively 'git-link)))
