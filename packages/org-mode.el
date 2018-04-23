@@ -1,5 +1,7 @@
 ;;; custom org mode configuration
-(use-package org)
+(use-package org
+  :bind (:map org-mode-map
+              ("C-," . helm-mini)))
 (require 'org)
 
 (org-babel-do-load-languages 'org-babel-load-languages

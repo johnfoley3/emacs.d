@@ -1,43 +1,18 @@
-;; Command to list ignored files:
-;; $ git ls-files --others --ignored --exclude-standard --directory
-(defun magit-ignored-files ()
-  (magit-git-items "ls-files" "--others" "--ignored" "--exclude-standard" "-z" "--directory"))
+(require 'utilities)
 
-(defun magit-insert-ignored-files ()
-  (-when-let (files (magit-ignored-files))
-    (magit-insert-section (ignored)
-      (magit-insert-heading "Ignored files:")
-      (magit-insert-un/tracked-files-1 files nil)
-      (insert ?\n))))
+(eval-when-compile
+  (defvar magit-last-seen-setup-instructions))
 
-;;;; Credit for endless/add-PR-fetch goes to Lily Carpenter
-;;;; Web: https://azrazalea.net
-;;;; Email: lily@azrazalea.net
 ;;; Magit
 (use-package magit
   :init
-  (global-set-key (kbd "C-x g") 'magit-status)
-  (add-hook 'magit-mode-hook #'endless/add-PR-fetch)
+  (setq magit-last-seen-setup-instructions "1.4.0")
   (unless (windows?) (add-hook 'git-commit-setup-hook #'git-commit-turn-on-flyspell))
+  :bind (("C-x g" . magit-status))
   :hook ((magit-status-sections-hook . magit-insert-ignored-files)))
 
 (use-package autorevert
   :delight auto-revert-mode)
-
-(setq magit-last-seen-setup-instructions "1.4.0")
-(defun endless/add-PR-fetch ()
-  "If refs/pull is not defined on a GH repo, define it."
-  (let ((fetch-address
-         "+refs/pull/*/head:refs/pull/origin/*"))
-    (unless (member
-             fetch-address
-             (magit-get-all "remote" "origin" "fetch"))
-      (let ((remote (magit-get "remote" "origin" "url")))
-        (when (and remote (string-match
-                           "github" remote))
-          (magit-git-string
-           "config" "--add" "remote.origin.fetch"
-           fetch-address))))))
 
 (use-package git-link
   :bind
