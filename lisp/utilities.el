@@ -72,5 +72,12 @@
       (kill-new filename)
       (message "Copied buffer file name '%s' to the clipboard." filename))))
 
+(defun move-line-to-previous-line ()
+  "Copy the current line up to the end of the previous line."
+  (interactive)
+  (move-beginning-of-line  nil) (set-mark-command nil)
+  (forward-line -1) (end-of-line) (delete-char 1))
+(global-set-key (kbd "C-c C-a") 'move-line-to-previous-line)
+
 (provide 'utilities)
 ;;; utilities.el ends here
