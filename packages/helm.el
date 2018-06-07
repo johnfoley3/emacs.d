@@ -22,3 +22,9 @@
 ;; front end for lobste.rs
 (use-package helm-lobsters)
 (use-package helm-chrome)
+
+;; Turn on auto-composition mode for helm
+;; When used from Lisp, using `nil' will turn _on_ the mode
+(add-hook 'helm-major-mode-hook
+          (lambda ()
+            (setq auto-composition-mode nil)))

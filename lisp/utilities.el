@@ -21,6 +21,51 @@
   "Figure out if the system type is Windows."
   (or (eq system-type 'ms-dos) (eq system-type 'windows-nt)))
 
+;;; Custom Functions
+;; Originally from stevey, adapted to support moving to a new directory.
+;; <http://stackoverflow.com/a/1834038/693712>
+(defun rename-file-and-buffer (new-name)
+  "Renames both current buffer and file it's visiting to NEW-NAME."
+  (interactive
+   (progn
+     (if (not (buffer-file-name))
+         (error "Buffer '%s' is not visiting a file!" (buffer-name)))
+     (list (read-file-name (format "Rename %s to: " (file-name-nondirectory
+                                                     (buffer-file-name)))))))
+  (if (equal new-name "")
+      (error "Aborted rename"))
+  (setq new-name (if (file-directory-p new-name)
+                     (expand-file-name (file-name-nondirectory
+                                        (buffer-file-name))
+                                       new-name)
+                   (expand-file-name new-name)))
+  ;; If the file isn't saved yet, skip the file rename, but still update the
+  ;; buffer name and visited file.
+  (if (file-exists-p (buffer-file-name))
+      (rename-file (buffer-file-name) new-name 1))
+  (let ((was-modified (buffer-modified-p)))
+    ;; This also renames the buffer, and works with uniquify
+    (set-visited-file-name new-name)
+    (if was-modified
+        (save-buffer)
+      ;; Clear buffer-modified flag caused by set-visited-file-name
+      (set-buffer-modified-p nil))
+    (message "Renamed to %s." new-name)))
+
+;; From http://emacsredux.com/blog/2013/04/03/delete-file-and-buffer/
+;; License unknown
+(defun delete-file-and-buffer ()
+  "Kill the current buffer and deletes the file it is visiting."
+  (interactive)
+  (let ((filename (buffer-file-name)))
+    (when filename
+      (if (vc-backend filename)
+          (vc-delete-file filename)
+        (progn
+          (delete-file filename)
+          (message "Deleted file %s" filename)
+          (kill-buffer))))))
+
 ;; https://stackoverflow.com/questions/10363982/how-can-i-open-a-temporary-buffer
 (defun generate-buffer ()
   "Create a unique buffer with a temporary name involving 'scratch'."
