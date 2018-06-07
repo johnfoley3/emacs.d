@@ -4,7 +4,7 @@
     (fset 'key-chord-define 'my/key-chord-define)
     (setq key-chord-one-key-delay 0.16)
     (key-chord-mode 1)
-    (key-chord-define-global "dd" 'foley/kill-whole-line-and-indent)
+    (key-chord-define-global "kk" 'foley/kill-whole-line-and-indent)
     (key-chord-define-global "uu" 'undo)))
 
 (defun foley/kill-whole-line-and-indent ()

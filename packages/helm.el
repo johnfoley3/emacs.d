@@ -12,6 +12,10 @@
 (use-package helm-company)
 (use-package helm-ag)
 (use-package helm-swoop)
+(use-package helm-descbinds
+  :defer t
+  :bind (("C-h b" . helm-descbinds)
+         ("C-h w" . helm-descbinds)))
 
 ;; These are more for fun
 
