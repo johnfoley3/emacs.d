@@ -39,11 +39,15 @@
 
 ;; make loading files easier
 (add-to-list 'load-path (expand-in-user-dir "lisp"))
-(add-to-list 'load-path (expand-in-user-dir "site"))
 
 (require 'utilities) ;; ./lisp/utilities.el
 (require 'packages) ;; ./lisp/packages.el
 (require 'fonts) ;; ./lisp/fonts.el
+
+(add-hook 'after-init-hook
+          (lambda ()
+            (mapc (lambda (package-file) (load package-file))
+                  (directory-files-recursively (concat user-emacs-directory "site/") "^[^\.].*\.el$"))))
 
 (set-face-attribute 'default nil :height 160)
 (tool-bar-mode -1)
@@ -70,6 +74,7 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (global-set-key (kbd "RET") 'newline-and-indent)
 (global-set-key (kbd "C-.") 'other-window)
+(global-set-key (kbd "C-c j") 'join-line)
 
 (add-hook 'eshell-mode-hook
           (lambda ()

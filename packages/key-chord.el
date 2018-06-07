@@ -1,18 +1,25 @@
 (use-package key-chord
   :init
   (progn
-    (fset 'key-chord-define 'my/key-chord-define)
+    (fset 'key-chord-define 'corgmonster/key-chord-define)
     (setq key-chord-one-key-delay 0.16)
     (key-chord-mode 1)
-    (key-chord-define-global "kk" 'foley/kill-whole-line-and-indent)
-    (key-chord-define-global "uu" 'undo)))
+    (key-chord-define-global "kk" 'corgmonster/kill-whole-line-and-indent)
+    (key-chord-define-global "oq" 'corgmonster/switch-to-previous-buffer)
+    (key-chord-define-global "j." 'corgmonster/join-lines/body)))
 
-(defun foley/kill-whole-line-and-indent ()
+(defun corgmonster/switch-to-previous-buffer ()
+  "Switch to previously open buffer.
+Repeated invocations toggle between the two most recently open buffers."
+  (interactive)
+  (switch-to-buffer (other-buffer (current-buffer) 1)))
+
+(defun corgmonster/kill-whole-line-and-indent ()
   "Kills whole line and indents point according to current mode."
   (interactive)
   (kill-whole-line) (indent-according-to-mode))
 
-(defun my/key-chord-define (keymap keys command)
+(defun corgmonster/key-chord-define (keymap keys command)
   "Define in KEYMAP, a key-chord of two keys in KEYS starting a COMMAND.
 \nKEYS can be a string or a vector of two elements. Currently only elements
 that corresponds to ascii codes in the range 32 to 126 can be used.
