@@ -6,7 +6,8 @@
     (key-chord-mode 1)
     (key-chord-define-global "kk" 'corgmonster/kill-whole-line-and-indent)
     (key-chord-define-global "oq" 'corgmonster/switch-to-previous-buffer)
-    (key-chord-define-global "j." 'corgmonster/join-lines/body)))
+    (key-chord-define-global "xs" 'save-buffer)
+    (key-chord-define-global "xj" 'corgmonster/join-lines/body)))
 
 (defun corgmonster/switch-to-previous-buffer ()
   "Switch to previously open buffer.
