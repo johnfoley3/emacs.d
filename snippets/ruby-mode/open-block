@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: open-block
+# type: command
+# key: {
+# --
+(insert "{")
+(newline-and-indent)
+(newline-and-indent)
+(move-end-of-line nil)
+(insert ",")
+(previous-line)
+(indent-according-to-mode)

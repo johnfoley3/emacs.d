@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: hash_block
+# key: n
+# --
+{
+        $0
+}

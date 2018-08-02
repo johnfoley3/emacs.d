@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: block
+# key: j
+# --
+do
+        $0
+end
