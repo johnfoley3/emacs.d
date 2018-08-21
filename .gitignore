@@ -20,3 +20,4 @@ bookmarks
 .DS_Store
 /emojis/*
 /url/*
+/rake.cache
