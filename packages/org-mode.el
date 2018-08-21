@@ -27,4 +27,7 @@
   :init
   (setq org-brain-path "~/org-brain")
   :config
-  (setq org-id-locations-file "~/.emacs.d/.org-id-locations"))
+  (setq org-id-track-globally t)
+  (setq org-id-locations-file "~/.emacs.d/.org-id-locations")
+  (setq org-brain-visualize-default-choices 'all)
+  (setq org-brain-title-max-length 12))
