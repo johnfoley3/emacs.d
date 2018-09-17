@@ -71,6 +71,7 @@
  '(inhibit-startup-screen t)
  '(js-indent-level 2)
  '(js2-mode-indent-ignore-first-tab t)
+ '(js2-strict-trailing-comma-warning nil)
  '(magit-diff-use-overlays nil)
  '(magit-rebase-arguments (quote ("--interactive")))
  '(nrepl-message-colors
