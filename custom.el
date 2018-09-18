@@ -77,7 +77,9 @@
    (quote
     ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
  '(org-agenda-files nil)
+ '(org-clock-persist t)
  '(org-fast-tag-selection-single-key (quote expert))
+ '(org-log-into-drawer nil)
  '(org-src-fontify-natively t)
  '(org-startup-truncated nil)
  '(org-todo-keywords

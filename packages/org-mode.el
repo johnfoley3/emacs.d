@@ -3,6 +3,7 @@
   :bind (:map org-mode-map
               ("C-," . helm-mini)))
 (require 'org)
+(global-set-key (kbd "C-c c") 'org-capture)
 
 (org-babel-do-load-languages 'org-babel-load-languages
                              '(
@@ -11,17 +12,6 @@
                              )
 
 (use-package org-jira)
-(require 'org-jira)
-
-(defun foley-org-insert-ticket-header ()
-  "Insert an org todo subheading with a link as the title."
-  (interactive)
-  (org-insert-todo-subheading nil) (org-insert-link))
-
-(defun foley-insert-contact-subheading (name)
-  "Insert a new org mode subheading with the NAME as the title."
-  (interactive "sName: ")
-  (org-insert-subheading nil) (insert name))
 
 (use-package org-brain
   :init
@@ -30,4 +20,4 @@
   (setq org-id-track-globally t)
   (setq org-id-locations-file "~/.emacs.d/.org-id-locations")
   (setq org-brain-visualize-default-choices 'all)
-  (setq org-brain-title-max-length 12))
+  (setq org-brain-title-max-length 20))

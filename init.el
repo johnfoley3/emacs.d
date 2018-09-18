@@ -46,7 +46,7 @@
 
 (add-hook 'after-init-hook
           (lambda ()
-            (mapc (lambda (package-file) (load package-file))
+            (mapc (lambda (site-file) (load site-file))
                   (directory-files-recursively (concat user-emacs-directory "site/") "^[^\.].*\.el$"))))
 
 (set-face-attribute 'default nil :height 160)
