@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: rubocop-enable
+# key: rbe
+# --
+# rubocop:enable $0

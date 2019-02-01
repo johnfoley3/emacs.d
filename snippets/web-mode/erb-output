@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: erb-output
+# key: ee
+# --
+<%= $0 %>
