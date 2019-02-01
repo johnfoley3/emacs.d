@@ -124,5 +124,12 @@
   (forward-line -1) (end-of-line) (delete-char 1))
 (global-set-key (kbd "C-c C-a") 'move-line-to-previous-line)
 
+(defun copy-line (arg)
+  "Copy lines (as many as ARG prefix argument) in the kill ring."
+  (interactive "p")
+  (kill-ring-save (line-beginning-position)
+                  (line-beginning-position (+ 1 arg)))
+  (message "%d line%s copied" arg (if (= 1 arg) "" "s")))
+
 (provide 'utilities)
 ;;; utilities.el ends here
