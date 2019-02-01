@@ -1,29 +1,29 @@
 ;;; Rust related packages
 
 ;;; rust mode for indentation, styling, syntax highlighting, etc
-(use-package rust-mode)
+;; (use-package rust-mode)
 
 ;;; major mode for TOML mode editing
 ;;; Putting this here since the only TOML files I've seen so far are Cargo.toml
 (use-package toml-mode)
 
 ;;; cargo minor mode to run cargo commands
-(use-package cargo
-  :init
-  (add-hook 'rust-mode-hook 'cargo-minor-mode))
+;; (use-package cargo
+;;   :init
+;;   (add-hook 'rust-mode-hook 'cargo-minor-mode))
 
-(use-package racer
-  :init
-  (add-hook 'rust-mode-hook 'racer-mode)
-  (add-hook 'racer-mode-hook #'company-mode))
+;; (use-package racer
+;;   :init
+;;   (add-hook 'rust-mode-hook 'racer-mode)
+;;   (add-hook 'racer-mode-hook #'company-mode))
 
-(use-package flymake-rust
-  :init
-  (add-hook 'rust-mode-hook 'flymake-rust-load))
+;; (use-package flymake-rust
+;;   :init
+;;   (add-hook 'rust-mode-hook 'flymake-rust-load))
 
-(use-package flycheck-rust
-  :init
-  (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
+;; (use-package flycheck-rust
+;;   :init
+;;   (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
 
 ;; Org mode babel support for Rust
-(use-package ob-rust)
+;; (use-package ob-rust)
