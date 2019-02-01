@@ -11,7 +11,18 @@
          "Guardfile\\'"
          "Rakefile\\'"
          "\\.gemspec\\'"
-         "\\.rabl\\'"))
+         "\\.rabl\\'")
+  :hook ((ruby-mode . hs-minor-mode)))
+
+(defun setup-ruby-hideshow ()
+  "Set up Ruby hideshow block delimiters"
+  (eval-after-load "hideshow"
+    '(add-to-list 'hs-special-modes-alist
+                  `(ruby-mode
+                    ,(rx (or "def" "class" "module" "do" "{" "["))
+                    ,(rx (or "}" "]" "end"))
+                    ,(rx (or "#" "=begin"))
+                    ruby-forward-sexp nil))))
 
 (defun go-to-compilation-window ()
   "Find and go to the first inf-ruby-compilation buffer."
