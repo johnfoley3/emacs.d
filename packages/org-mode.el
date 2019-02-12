@@ -14,7 +14,7 @@
 (setq org-capture-templates '())
 (add-to-list 'org-capture-templates '("i" "GTD quick capture to inbox" entry
                                       (file+headline "~/projects/org-notes/inbox.org" "Inbox")
-                                      "** TODO %^{description}" :prepend t))
+                                      "** TODO %^{description}\n %?" :prepend t))
 (add-to-list 'org-capture-templates '("l" "Daily Log" entry
                                       (file+datetree "~/projects/org-notes/days.org")
                                       "**** %<%H:%M> %^{description}\n %?"))
