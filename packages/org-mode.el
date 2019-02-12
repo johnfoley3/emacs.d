@@ -11,6 +11,14 @@
                                )
                              )
 
+(setq org-capture-templates '())
+(add-to-list 'org-capture-templates '("i" "GTD quick capture to inbox" entry
+                                      (file+headline "~/projects/org-notes/inbox.org" "Inbox")
+                                      "** TODO %^{description}" :prepend t))
+(add-to-list 'org-capture-templates '("l" "Daily Log" entry
+                                      (file+datetree "~/projects/org-notes/days.org")
+                                      "**** %<%H:%M> %^{description}\n %?"))
+
 (use-package org-jira)
 
 (use-package org-brain
@@ -29,6 +37,8 @@
         (today (format-time-string "%FT%T%z")))
     (insert (format template host today))))
 
+;; is not working yet
+;; git does not recoganize that text was added
 (defun commit-org-notes ()
   (interactive)
   (add-hook 'git-commit-setup-hook 'commit-org-message)
