@@ -10,7 +10,7 @@
                                (shell . t)
                                )
                              )
-
+(add-to-list 'org-agenda-files "~/projects/org-notes/inbox.org")
 (setq org-capture-templates '())
 (add-to-list 'org-capture-templates '("i" "GTD quick capture to inbox" entry
                                       (file+headline "~/projects/org-notes/inbox.org" "Inbox")

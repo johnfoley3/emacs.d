@@ -78,7 +78,10 @@
  '(nrepl-message-colors
    (quote
     ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
- '(org-agenda-files nil)
+ '(org-agenda-files (quote ("~/projects/org-notes/inbox.org")))
+ '(org-agenda-restore-windows-after-quit t)
+ '(org-agenda-sticky t)
+ '(org-agenda-window-setup (quote other-window))
  '(org-capture-templates
    (quote
     (("w" "Daily log test 3" entry
@@ -91,7 +94,7 @@
       "")
      ("i" "GTD quick capture to inbox" entry
       (file+headline "~/projects/org-notes/inbox.org" "Inbox")
-      "** TODO %^{description}" :prepend t))))
+      "** TODO %^{description}" :prepend t))) t)
  '(org-clock-persist t)
  '(org-fast-tag-selection-single-key (quote expert))
  '(org-log-into-drawer nil)
