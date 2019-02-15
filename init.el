@@ -56,8 +56,8 @@
 
 (setq backup-directory-alist '(("." . "~/.backups")))
 
-(add-hook 'after-init-hook (lambda ()
-                             (load-theme 'spacemacs-dark)))
+;; (add-hook 'after-init-hook (lambda ()
+;;                              (load-theme 'spacemacs-dark)))
 
 ;; (add-hook 'after-init-hook (lambda ()
 ;;                              (if (> (string-to-number (format-time-string "%k")) 18)

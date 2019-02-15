@@ -29,6 +29,7 @@
  '(custom-safe-themes
    (quote
     ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "e11569fd7e31321a33358ee4b232c2d3cf05caccd90f896e1df6cab228191109" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
+ '(doom-modeline-mode t)
  '(fci-rule-color "#eee8d5")
  '(flycheck-emacs-lisp-load-path (quote inherit))
  '(flycheck-ruby-rubocop-executable nil)
@@ -77,7 +78,23 @@
  '(nrepl-message-colors
    (quote
     ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
- '(org-agenda-files nil)
+ '(org-agenda-files (quote ("~/projects/org-notes/inbox.org")))
+ '(org-agenda-restore-windows-after-quit t)
+ '(org-agenda-sticky t)
+ '(org-agenda-window-setup (quote other-window))
+ '(org-capture-templates
+   (quote
+    (("w" "Daily log test 3" entry
+      (file+datetree "~/projects/org-notes/days.org")
+      "**** %^{description}")
+     ("o" "Daily log" entry
+      (file+datetree "~/projects/org-notes/days.org"))
+     ("l" "Daily log" entry
+      (file+olp+datetree "~/projects/org-notes/days.org")
+      "")
+     ("i" "GTD quick capture to inbox" entry
+      (file+headline "~/projects/org-notes/inbox.org" "Inbox")
+      "** TODO %^{description}" :prepend t))) t)
  '(org-clock-persist t)
  '(org-fast-tag-selection-single-key (quote expert))
  '(org-log-into-drawer nil)
@@ -92,7 +109,7 @@
  '(package-enable-at-startup nil)
  '(package-selected-packages
    (quote
-    (lua-mode ob-elixir ob-elixer flycheck-mix alchemist elixir-mode helm-descbinds key-chord ob-restclient company-restclient restclient emojify org-brain org-jira guide-key smart-mode-line helm-chrome engine-mode gotest gorepl-mode yarn-mode npm-mode helm-swoop indent-guide add-node-modules-path dotenv-mode spacemacs-theme zenburn-theme ob-crystal inf-crystal flycheck-crystal crystal-mode smartscan toml-mode nodejs-repl multi-term prettier-js org-mode org dockerfile-mode docker nginx-mode helm-dash devdocs editorconfig jenkins helm-lobsters fontawesome google-this company-terraform terraform-mode unison-mode unison delight ob-rust hledger-mode rust-mode realgud-pry realgud flycheck-rust flymake-rust racer cargo emmet-mode exec-path-from-shell helm-rails helm-rb js2-refactor markdown-mode+ markdown-mode go-snippets flymake-go company-go go-mode helm-css-scss less-css-mode pdf-tools flycheck solarized-emacs prodigy git-link bundler dumb-jump lua flymake-lua company-lua yasnippet js-doc smartparens smartparents php-mode rspec-mode color-theme-solarized emacs-color-theme-solarized rainbow-identifiers rainbow-delimiters rainbow-parens foreman-mode web-mode yaml-mode paradox ace-jump-mode helm-ag helm-company helm XSprojectile-rails js2-mode nlinum-relative nlinum ag magit projectile-rails rubocop rbenv company-quickhelp use-package company helm-projectile org-projectile projectile projectile-codesearch projectile-direnv projectile-git-autofetch robe tide solarized-theme)))
+    (doom-modeline doom-themes lua-mode ob-elixir ob-elixer flycheck-mix alchemist elixir-mode helm-descbinds key-chord ob-restclient company-restclient restclient emojify org-brain org-jira guide-key smart-mode-line helm-chrome engine-mode gotest gorepl-mode yarn-mode npm-mode helm-swoop indent-guide add-node-modules-path dotenv-mode spacemacs-theme zenburn-theme ob-crystal inf-crystal flycheck-crystal crystal-mode smartscan toml-mode nodejs-repl multi-term prettier-js org-mode org dockerfile-mode docker nginx-mode helm-dash devdocs editorconfig jenkins helm-lobsters fontawesome google-this company-terraform terraform-mode unison-mode unison delight ob-rust hledger-mode rust-mode realgud-pry realgud flycheck-rust flymake-rust racer cargo emmet-mode exec-path-from-shell helm-rails helm-rb js2-refactor markdown-mode+ markdown-mode go-snippets flymake-go company-go go-mode helm-css-scss less-css-mode pdf-tools flycheck solarized-emacs prodigy git-link bundler dumb-jump lua flymake-lua company-lua yasnippet js-doc smartparens smartparents php-mode rspec-mode color-theme-solarized emacs-color-theme-solarized rainbow-identifiers rainbow-delimiters rainbow-parens foreman-mode web-mode yaml-mode paradox ace-jump-mode helm-ag helm-company helm XSprojectile-rails js2-mode nlinum-relative nlinum ag magit projectile-rails rubocop rbenv company-quickhelp use-package company helm-projectile org-projectile projectile projectile-codesearch projectile-direnv projectile-git-autofetch robe tide solarized-theme)))
  '(paradox-github-token t)
  '(pdf-misc-print-programm "/usr/bin/gtklp")
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
@@ -108,14 +125,19 @@
     ("rebar.config" "project.clj" "build.boot" "SConstruct" "pom.xml" "build.sbt" "gradlew" "build.gradle" ".ensime" "Gemfile" "requirements.txt" "setup.py" "tox.ini" "composer.json" "Cargo.toml" "mix.exs" "stack.yaml" "info.rkt" "DESCRIPTION" "TAGS" "GTAGS" "package.json")))
  '(rbenv-show-active-ruby-in-modeline nil)
  '(rspec-rake-command "rails")
- '(ruby-align-chained-calls t)
- '(ruby-insert-encoding-magic-comment nil)
+ '(rspec-use-spring-when-possible nil)
+ '(ruby-align-chained-calls nil)
+ '(ruby-deep-arglist nil)
+ '(ruby-deep-indent-paren nil)
+ '(ruby-deep-indent-paren-style nil)
+ '(ruby-insert-encoding-magic-comment t)
  '(rust-format-on-save t)
  '(safe-local-variable-values
    (quote
     ((jiralib-url . "https://intoximeters.atlassian.net")
      (jiralib-url . https://intoximeters\.atlassian\.net))))
  '(sentence-end-double-space nil)
+ '(sh-basic-offset 2)
  '(show-paren-mode t)
  '(size-indication-mode t)
  '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#eee8d5" 0.2))

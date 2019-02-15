@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: anonymous-function-with-semi
+# key: afs
+# --
+function() {
+  $0
+};

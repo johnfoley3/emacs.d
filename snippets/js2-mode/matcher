@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: matcher
+# key: matcher
+# --
+  it('shows the $1 link with permission', function() {
+          this.roles.$2 = true;
+          expect(this.findNavElement('$3')).not.toHaveClass('ng-hide');
+        });
+
+        it('does not show the $1 link without permission', function() {
+          this.roles.$2 = false;
+          expect(this.findNavElement('$3')).toHaveClass('ng-hide');
+        });
