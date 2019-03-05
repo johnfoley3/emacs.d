@@ -131,5 +131,18 @@
                   (line-beginning-position (+ 1 arg)))
   (message "%d line%s copied" arg (if (= 1 arg) "" "s")))
 
+(defun foley/add-project (addr)
+  "Clone a git SSH formatted ADDR into a filesystem location formatted by host/organization/project, then add as a Projectile project."
+  (interactive "s")
+  (let* ((addr-regex ".*\@\\(.*\\):\\(.*\\)/\\(.*\\)\.git")
+         (matches-list (s-match-strings-all addr-regex addr))
+         (matches (car matches-list))
+         (host (nth 1 matches))
+         (org (nth 2 matches))
+         (project (nth 3 matches)))
+    (make-directory "projects" "~")
+    ;; (make-directory (concat "projects" "/" "testing123") "~")
+    ))
+
 (provide 'utilities)
 ;;; utilities.el ends here
