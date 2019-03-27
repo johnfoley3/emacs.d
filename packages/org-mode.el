@@ -11,6 +11,8 @@
                                )
                              )
 (add-to-list 'org-agenda-files "~/projects/org-notes/inbox.org")
+(add-to-list 'org-agenda-files "~/projects/org-notes/projects.org")
+(add-to-list 'org-agenda-files "~/projects/org-notes/work.org")
 (setq org-capture-templates '())
 (add-to-list 'org-capture-templates '("i" "GTD quick capture to inbox" entry
                                       (file+headline "~/projects/org-notes/inbox.org" "Inbox")
@@ -19,11 +21,18 @@
                                       (file+datetree "~/projects/org-notes/days.org")
                                       "**** %<%H:%M> %^{description}\n%?"))
 
-(use-package org-brain
-  :init
-  (setq org-brain-path "~/org-brain")
-  :config
-  (setq org-id-track-globally t)
-  (setq org-id-locations-file "~/.emacs.d/.org-id-locations")
-  (setq org-brain-visualize-default-choices 'all)
-  (setq org-brain-title-max-length 20))
+(setq org-refile-targets '((org-agenda-files . (:maxlevel . 3))))
+
+;;; Thank you Sacha Chua
+;;; source http://pages.sachachua.com/.emacs.d/Sacha.html
+(defun my/org-use-speed-commands-for-headings-and-lists ()
+  "Activate speed commands on list items too."
+  (or (and (looking-at org-outline-regexp) (looking-back "^\**"))
+      (save-excursion (and (looking-at (org-item-re)) (looking-back "^[ \t]*")))))
+(setq org-use-speed-commands 'my/org-use-speed-commands-for-headings-and-lists)
+
+(add-to-list 'org-speed-commands-user '("N" org-narrow-to-subtree))
+(add-to-list 'org-speed-commands-user '("W" widen))
+(add-to-list 'org-speed-commands-user '("i" call-interactively 'org-clock-in))
+(add-to-list 'org-speed-commands-user '("o" call-interactively 'org-clock-out))
+(add-to-list 'org-speed-commands-user '("$" call-interactively 'org-archive-subtree))

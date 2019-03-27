@@ -94,7 +94,7 @@
       "")
      ("i" "GTD quick capture to inbox" entry
       (file+headline "~/projects/org-notes/inbox.org" "Inbox")
-      "** TODO %^{description}" :prepend t))))
+      "** TODO %^{description}" :prepend t))) t)
  '(org-clock-persist t)
  '(org-fast-tag-selection-single-key (quote expert))
  '(org-log-into-drawer nil)
