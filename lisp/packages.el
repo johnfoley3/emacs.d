@@ -23,6 +23,7 @@
 
 ;;; Code:
 (require 'package) ;; You might already have this line
+(package-initialize)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
@@ -33,14 +34,16 @@
                          user-emacs-directory)))
   (setq package-user-dir versioned-package-dir))
 
-(package-initialize)
-(package-refresh-contents)
-
 (when (not (package-installed-p 'use-package))
     (progn
       (package-install 'use-package)))
+(defvar use-package-verbose t)
 (defvar use-package-always-ensure t)
 (require 'use-package)
+
+(use-package auto-compile
+  :config (auto-compile-on-load-mode))
+(setq load-prefer-newer t)
 
 (add-hook 'after-init-hook
           (lambda ()
