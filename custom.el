@@ -130,7 +130,7 @@
  '(ruby-deep-arglist nil)
  '(ruby-deep-indent-paren nil)
  '(ruby-deep-indent-paren-style nil)
- '(ruby-insert-encoding-magic-comment t)
+ '(ruby-insert-encoding-magic-comment nil)
  '(rust-format-on-save t)
  '(safe-local-variable-values
    (quote
