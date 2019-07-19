@@ -15,6 +15,7 @@ tramp
 .gnus
 secrets
 bookmarks
+transient
 
 # MacOSX
 .DS_Store
