@@ -1,5 +1,4 @@
 (use-package nlinum)
-;; (add-hook 'emacs-startup-hook 'global-nlinum-mode)
 ;; Set/unset linum
 (if (daemonp)
     ;; Need to delay linum activation till the frame and fonts are loaded, only
