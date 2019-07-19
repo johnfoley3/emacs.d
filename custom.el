@@ -28,7 +28,7 @@
  '(cua-read-only-cursor-color "#859900")
  '(custom-safe-themes
    (quote
-    ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "e11569fd7e31321a33358ee4b232c2d3cf05caccd90f896e1df6cab228191109" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
+    ("0598c6a29e13e7112cfbc2f523e31927ab7dce56ebb2016b567e1eff6dc1fd4f" "84da7b37214b4ac095a55518502dfa82633bee74f64daf6e1785322e77516f96" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "e11569fd7e31321a33358ee4b232c2d3cf05caccd90f896e1df6cab228191109" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
  '(doom-modeline-mode t)
  '(fci-rule-color "#eee8d5")
  '(flycheck-emacs-lisp-load-path (quote inherit))
@@ -67,6 +67,7 @@
  '(hl-fg-colors
    (quote
     ("#fdf6e3" "#fdf6e3" "#fdf6e3" "#fdf6e3" "#fdf6e3" "#fdf6e3" "#fdf6e3" "#fdf6e3")))
+ '(hl-paren-colors (quote ("#2aa198" "#b58900" "#268bd2" "#6c71c4" "#859900")))
  '(image-dired-external-viewer nil)
  '(inf-ruby-default-implementation "pry")
  '(inhibit-startup-screen t)
@@ -109,7 +110,7 @@
  '(package-enable-at-startup nil)
  '(package-selected-packages
    (quote
-    (mocha doom-modeline doom-themes lua-mode ob-elixir ob-elixer flycheck-mix alchemist elixir-mode helm-descbinds key-chord ob-restclient company-restclient restclient emojify org-brain org-jira guide-key smart-mode-line helm-chrome engine-mode gotest gorepl-mode yarn-mode npm-mode helm-swoop indent-guide add-node-modules-path dotenv-mode spacemacs-theme zenburn-theme smartscan toml-mode nodejs-repl multi-term prettier-js org-mode org dockerfile-mode docker nginx-mode helm-dash devdocs editorconfig jenkins helm-lobsters fontawesome google-this company-terraform terraform-mode unison-mode unison delight ob-rust hledger-mode rust-mode realgud-pry realgud flycheck-rust flymake-rust racer cargo emmet-mode exec-path-from-shell helm-rails helm-rb js2-refactor markdown-mode+ markdown-mode go-snippets flymake-go company-go go-mode helm-css-scss less-css-mode pdf-tools flycheck solarized-emacs prodigy git-link bundler dumb-jump lua flymake-lua company-lua yasnippet js-doc smartparens smartparents php-mode rspec-mode color-theme-solarized emacs-color-theme-solarized rainbow-identifiers rainbow-delimiters rainbow-parens foreman-mode web-mode yaml-mode paradox ace-jump-mode helm-ag helm-company helm XSprojectile-rails js2-mode nlinum-relative nlinum ag magit projectile-rails rubocop rbenv company-quickhelp use-package company helm-projectile org-projectile projectile projectile-codesearch projectile-direnv projectile-git-autofetch robe tide solarized-theme)))
+    (doom-themes sqlformat spacemacs-theme yaml-mode helm-css-scss emmet-mode web-mode tide company-terraform terraform-mode solarized-theme smartparens toml-mode rubocop rbenv rspec-mode robe bundler ob-restclient company-restclient restclient rainbow-delimiters projectile-rails prodigy paradox mocha nodejs-repl nlinum nginx-mode multi-term markdown-mode+ markdown-mode git-link magit lua-mode key-chord yarn-mode npm-mode add-node-modules-path js2-refactor js-doc js2-mode jenkins indent-guide hydra helm-chrome helm-lobsters helm-descbinds helm-swoop helm-ag helm-company helm-projectile helm guide-key flycheck exec-path-from-shell emojify editorconfig dotenv-mode dockerfile-mode docker company-quickhelp company delight ag ace-jump-mode use-package)))
  '(paradox-github-token t)
  '(pdf-misc-print-programm "/usr/bin/gtklp")
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
@@ -119,7 +120,6 @@
  '(projectile-globally-ignored-directories
    (quote
     (".idea" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work")))
- '(projectile-mode t nil (projectile))
  '(projectile-project-root-files
    (quote
     ("rebar.config" "project.clj" "build.boot" "SConstruct" "pom.xml" "build.sbt" "gradlew" "build.gradle" ".ensime" "Gemfile" "requirements.txt" "setup.py" "tox.ini" "composer.json" "Cargo.toml" "mix.exs" "stack.yaml" "info.rkt" "DESCRIPTION" "TAGS" "GTAGS" "package.json")))
@@ -138,14 +138,13 @@
      (jiralib-url . https://intoximeters\.atlassian\.net))))
  '(sentence-end-double-space nil)
  '(sh-basic-offset 2)
- '(show-paren-mode t)
- '(size-indication-mode t)
  '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#eee8d5" 0.2))
  '(sql-postgres-login-params
    (quote
     ((user :default "jfoley")
      password server
      (database :default "jfoley"))))
+ '(sqlformat-command (quote pgformatter))
  '(term-default-bg-color "#fdf6e3")
  '(term-default-fg-color "#657b83")
  '(typescript-indent-level 2)
@@ -195,4 +194,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-todo ((t (:foreground "Red1" :weight bold)))))
+ )
