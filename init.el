@@ -15,6 +15,7 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 (setq use-package-always-ensure t)
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 
 ;; (setq debug-on-error t)
 
