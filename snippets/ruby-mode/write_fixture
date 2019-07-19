@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: write_to_fixture
+# key: writef
+# --
+File.write(Rails.root.join(RSpec.configuration.file_fixture_path, '$1'), rendered)$0
