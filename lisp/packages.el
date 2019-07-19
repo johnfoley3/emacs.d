@@ -22,27 +22,16 @@
 ;; Sets up the packages config, including repos, and then requires package files and their config
 
 ;;; Code:
-(require 'package) ;; You might already have this line
-(package-initialize)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/"))
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
+(unless (assoc-default "melpa" package-archives)
+  (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t))
+(unless (assoc-default "org" package-archives)
+  (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t))
 
-;; Install into separate package dirs for each Emacs version, to prevent bytecode incompatibility
-(let ((versioned-package-dir
-       (expand-file-name (format "elpa-%s.%s" emacs-major-version emacs-minor-version)
-                         user-emacs-directory)))
-  (setq package-user-dir versioned-package-dir))
-
-(when (not (package-installed-p 'use-package))
-    (progn
-      (package-install 'use-package)))
-(defvar use-package-verbose t)
-(defvar use-package-always-ensure t)
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
 (require 'use-package)
 
-(use-package auto-compile
-  :config (auto-compile-on-load-mode))
 (setq load-prefer-newer t)
 
 (add-hook 'after-init-hook

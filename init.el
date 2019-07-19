@@ -14,6 +14,7 @@
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 (package-initialize)
+(setq use-package-always-ensure t)
 
 ;; (setq debug-on-error t)
 
@@ -33,10 +34,6 @@
   "Expand NAME to an absolute path in the user Emacs' directory."
   (expand-file-name NAME user-emacs-directory))
 
-;; Custom file for emacs custom config. Cleans up the init.el file considerably
-(setq custom-file (expand-in-user-dir "custom.el"))
-(load custom-file)
-
 ;; make loading files easier
 (add-to-list 'load-path (expand-in-user-dir "lisp"))
 
@@ -48,6 +45,9 @@
           (lambda ()
             (mapc (lambda (site-file) (load site-file))
                   (directory-files-recursively (concat user-emacs-directory "site/") "^[^\.].*\.el$"))))
+
+(setq custom-file (expand-in-user-dir "custom.el"))
+(load custom-file t)
 
 (set-face-attribute 'default nil :height 160)
 (tool-bar-mode -1)
