@@ -1,7 +1,5 @@
-;;; For settings and packages that I don't know where to put or don't want to make a whole file for.
-
-(require 'delight)
+(use-package delight)
 (delight '(
-           (yas/minor-mode)
-           (abbrev-mode)
-           ))
+          (yas/minor-mode)
+          (abbrev-mode)
+          ))
