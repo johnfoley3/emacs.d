@@ -4,6 +4,7 @@
               ("C-," . helm-mini)))
 (require 'org)
 (global-set-key (kbd "C-c c") 'org-capture)
+(global-set-key (kbd "C-c a") 'org-agenda)
 
 (org-babel-do-load-languages 'org-babel-load-languages
                              '(
