@@ -37,12 +37,19 @@
   (inf-ruby-switch-from-compilation)
   (end-of-buffer))
 
+(defun foley-rspec-verify-single-with-overwrite ()
+  "Do 'rspec-verify-single and set environment variable to overwrite fixture."
+  (interactive)
+  (let ((compilation-environment "RSPEC_OVERWRITE_SNAPSHOT=1"))
+    (rspec-verify-single)
+    ))
+
 (defun foley-rspec-verify-debug ()
   "Do 'rspec-verify but will also move to compilation window for editing."
   (interactive)
   (rspec-verify)
   (go-to-compilation-window)
-  (inf-ruby-switch-from-compilation)
+  (read-only-mode)
   (end-of-buffer))
 
 (use-package inf-ruby
