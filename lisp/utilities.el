@@ -127,8 +127,10 @@
 (defun copy-line (arg)
   "Copy lines (as many as ARG prefix argument) in the kill ring."
   (interactive "p")
-  (kill-ring-save (line-beginning-position)
-                  (line-beginning-position (+ 1 arg)))
+  (smart-line-beginning)
+  (read-only-mode 1)
+  (kill-line arg)
+  (read-only-mode 0)
   (message "%d line%s copied" arg (if (= 1 arg) "" "s")))
 
 (defun foley/add-project (addr)

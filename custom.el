@@ -75,6 +75,7 @@
  '(js2-mode-indent-ignore-first-tab t)
  '(js2-strict-trailing-comma-warning nil)
  '(magit-diff-use-overlays nil)
+ '(magit-pull-or-fetch t)
  '(magit-rebase-arguments (quote ("--interactive")))
  '(nrepl-message-colors
    (quote
@@ -110,7 +111,7 @@
  '(package-enable-at-startup nil)
  '(package-selected-packages
    (quote
-    (doom-themes sqlformat spacemacs-theme yaml-mode helm-css-scss emmet-mode web-mode tide company-terraform terraform-mode solarized-theme smartparens toml-mode rubocop rbenv rspec-mode robe bundler ob-restclient company-restclient restclient rainbow-delimiters projectile-rails prodigy paradox mocha nodejs-repl nlinum nginx-mode multi-term markdown-mode+ markdown-mode git-link magit lua-mode key-chord yarn-mode npm-mode add-node-modules-path js2-refactor js-doc js2-mode jenkins indent-guide hydra helm-chrome helm-lobsters helm-descbinds helm-swoop helm-ag helm-company helm-projectile helm guide-key flycheck exec-path-from-shell emojify editorconfig dotenv-mode dockerfile-mode docker company-quickhelp company delight ag ace-jump-mode use-package)))
+    (indium doom-themes sqlformat spacemacs-theme yaml-mode helm-css-scss emmet-mode web-mode tide company-terraform terraform-mode solarized-theme smartparens toml-mode rubocop rbenv rspec-mode robe bundler ob-restclient company-restclient restclient rainbow-delimiters projectile-rails prodigy paradox mocha nodejs-repl nlinum nginx-mode multi-term markdown-mode+ markdown-mode git-link magit lua-mode key-chord yarn-mode npm-mode add-node-modules-path js2-refactor js-doc js2-mode jenkins indent-guide hydra helm-chrome helm-lobsters helm-descbinds helm-swoop helm-ag helm-company helm-projectile helm guide-key flycheck exec-path-from-shell emojify editorconfig dotenv-mode dockerfile-mode docker company-quickhelp company delight ag ace-jump-mode use-package)))
  '(paradox-github-token t)
  '(pdf-misc-print-programm "/usr/bin/gtklp")
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
@@ -126,7 +127,7 @@
  '(rbenv-show-active-ruby-in-modeline nil)
  '(rspec-rake-command "rails")
  '(rspec-use-spring-when-possible nil)
- '(ruby-align-chained-calls nil)
+ '(ruby-align-chained-calls t)
  '(ruby-deep-arglist nil)
  '(ruby-deep-indent-paren nil)
  '(ruby-deep-indent-paren-style nil)
