@@ -16,7 +16,8 @@
 (package-initialize)
 (setq use-package-always-ensure t)
 (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
-
+(setq kill-read-only-ok t)
+(setq compilation-scroll-output t)
 ;; (setq debug-on-error t)
 
 ;; an older version of emacs may try to load this accidentally; prevent the issue right away
@@ -83,3 +84,4 @@
 
 (provide 'init)
 ;;; init.el ends here
+(put 'narrow-to-page 'disabled nil)
