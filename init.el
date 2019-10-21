@@ -18,6 +18,7 @@
 (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 (setq kill-read-only-ok t)
 (setq compilation-scroll-output t)
+(global-display-line-numbers-mode)
 ;; (setq debug-on-error t)
 
 ;; an older version of emacs may try to load this accidentally; prevent the issue right away
