@@ -4,6 +4,8 @@
 ;; compare against this later
 ;; (add-to-list 'auto-mode-alist (cons (rx ".js" eos) 'js2-mode))
 
+(use-package prettier-js)
+
 ;;; jsdoc mode
 (use-package js-doc)
 
