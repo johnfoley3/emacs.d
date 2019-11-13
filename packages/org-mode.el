@@ -23,6 +23,14 @@
                                       "**** %<%H:%M> %^{description}\n%?"))
 
 (setq org-refile-targets '((org-agenda-files . (:maxlevel . 3))))
+;; Tell org not to use the default step by step approach to narrowing refile headers,
+;; since helm is used to narrow results
+(setq org-outline-path-complete-in-steps nil)
+
+;; Could be useful if I end up refiling lots of new things with a structure
+;; in mind, but doesn't exist yet. The current approach would be to create that
+;; structure before refiling the target (even if it means aborting a refiling)
+;; (setq org-refile-allow-creating-parent-nodes 'confirm)
 
 ;;; Thank you Sacha Chua
 ;;; source http://pages.sachachua.com/.emacs.d/Sacha.html
