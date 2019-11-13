@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: jqel
+# key: jqel
+# --
+var $1 = \$('$2');$0

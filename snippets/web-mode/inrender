@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: inrender
+# key: inrender
+# --
+<%= render('$1') %>$0

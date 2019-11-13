@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: jqscript
+# key: jqscript
+# --
+<script>
+ $(function() {
+   $0
+ });
+</script>

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: option_both_same
+# key: os
+# --
+<option value="$1">$1</option>
