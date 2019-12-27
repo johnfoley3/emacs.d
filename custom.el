@@ -127,6 +127,7 @@
  '(rbenv-show-active-ruby-in-modeline nil)
  '(rspec-rake-command "rails")
  '(rspec-use-spring-when-possible nil)
+ '(rubocop-autocorrect-on-save nil)
  '(ruby-align-chained-calls t)
  '(ruby-deep-arglist nil)
  '(ruby-deep-indent-paren nil)
