@@ -11,15 +11,15 @@
                                (shell . t)
                                )
                              )
-(add-to-list 'org-agenda-files "~/projects/org-notes/inbox.org")
-(add-to-list 'org-agenda-files "~/projects/org-notes/projects.org")
-(add-to-list 'org-agenda-files "~/projects/org-notes/work.org")
+(add-to-list 'org-agenda-files "~/org/inbox.org")
+(add-to-list 'org-agenda-files "~/org/days.org")
+(add-to-list 'org-agenda-files "~/org/hinge_health.org")
 (setq org-capture-templates '())
 (add-to-list 'org-capture-templates '("i" "GTD quick capture to inbox" entry
-                                      (file+headline "~/projects/org-notes/inbox.org" "Inbox")
+                                      (file+headline "~/org/inbox.org" "Inbox")
                                       "** TODO %^{description}\n%?" :prepend t))
 (add-to-list 'org-capture-templates '("l" "Daily Log" entry
-                                      (file+datetree "~/projects/org-notes/days.org")
+                                      (file+datetree "~/org/days.org")
                                       "**** %<%H:%M> %^{description}\n%?"))
 
 (setq org-refile-targets '((org-agenda-files . (:maxlevel . 3))))
