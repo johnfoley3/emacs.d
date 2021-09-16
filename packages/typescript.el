@@ -12,7 +12,8 @@
 
 (use-package tide
   :init
-  (add-hook 'typescript-mode-hook #'setup-tide-mode))
+  (add-hook 'typescript-mode-hook #'setup-tide-mode)
+  :hook ((typescript-mode . prettier-js-mode)))
 
 ;; use web-mode for .tsx
 ;; enable typescript-tslint checker only for tsx files
